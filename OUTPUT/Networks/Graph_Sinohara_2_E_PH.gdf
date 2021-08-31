@@ -1,0 +1,227 @@
+nodedef>name VARCHAR, label VARCHAR, x DOUBLE, y DOUBLE, set VARCHAR
+Plant_1, "Persicaria hydropiper", 0, 1.6428571428571428, Plantconnector
+Insect_h_14, "Atrachya menetriesi", -3, -1.2222222222222223, Herbivore
+Insect_h_16, "Conocephalus chinensis", -3, -1.4444444444444444, Herbivore
+Plant_14, "Arthraxon hispidus", 0, -1.6428571428571428, Plant
+Plant_4, "Vigna angularis var. nipponensis", 0, 1.7857142857142858, Plantconnector
+Insect_h_7, "Phaneroptera falcata", -3, 0.7777777777777778, Herbivore
+Plant_13, "Cynodon dactylon", 0, -1.3571428571428572, Plant
+Insect_h_5, "Oxya yezoensis", -3, 0.5555555555555556, Herbivore
+Plant_1, "Persicaria hydropiper", 0, 1.6428571428571428, Plantconnector
+Insect_p_9, "Diptera sp.1", 3, -1.7, Pollinator
+Insect_p_19, "Phytomia zonata", 3, 0.5, Pollinator
+Insect_p_13, "Xylocopa appendiculata", 3, -1.5, Pollinator
+Insect_p_3, "Stomorhina obsoleta", 3, 1.5, Pollinator
+Insect_p_17, "Melanostoma orientale", 3, -1.1, Pollinator
+Insect_p_2, "Sphaerophoria macrogaster", 3, 1.9, Pollinator
+Insect_p_14, "Episyrphus balteatus", 3, 1.3, Pollinator
+Plant_15, "Vicia sativa subsp. nigra", 0, 1.3571428571428572, Plant
+Insect_p_16, "Parnara guttata", 3, 0.3, Pollinator
+Insect_p_6, "Apoidea sp.", 3, 0.7, Pollinator
+Plant_16, "Pueraria lobata", 0, 0.5, Plant
+Insect_p_5, "Halictidae sp.", 3, 1.7, Pollinator
+Plant_4, "Vigna angularis var. nipponensis", 0, 1.7857142857142858, Plantconnector
+Insect_p_1, "Eurema mandarina", 3, -0.5, Pollinator
+Insect_p_15, "Cephonodes hylas", 3, -1.3, Pollinator
+Insect_p_12, "Lycaena phlaeas", 3, 1.1, Pollinator
+Insect_p_8, "Tachinidae sp.", 3, -0.3, Pollinator
+Plant_22, "Persicaria longiseta", 0, 0.7857142857142857, Plant
+Insect_p_10, "Sarcophagidae sp.", 3, -0.1, Pollinator
+Plant_23, "Acalypha australis", 0, 0.9285714285714286, Plant
+Plant_17, "Liliaceae.sp", 0, 0.6428571428571429, Plant
+Plant_26, "Lactuca indica", 0, 1.9285714285714286, Plantconnector
+Plant_12, "Portulaca oleracea", 0, 1.2142857142857142, Plant
+Plant_9, "Kummerowia striata", 0, 1.5, Plantconnector
+Plant_6, "Vulpia myuros", 0, 1.0714285714285714, Plant
+Plant_10, "Hemerocallis fulva var. kwanso", 0, 0.07142857142857142, Plant
+Plant_27, "Ampelopsis glandulosa var. heterophylla", 0, 0.35714285714285715, Plant
+Plant_5, "Paspalum thunbergii", 0, -0.35714285714285715, Plant
+Plant_0, "Boehmeria japonica var. longispica", 0, -0.6428571428571429, Plant
+Plant_8, "Cirsium japonicum", 0, -0.07142857142857142, Plant
+Plant_24, "Achyranthes bidentata var. japonica", 0, 0.21428571428571427, Plant
+Plant_7, "Conyza sumatrensis", 0, -0.21428571428571427, Plant
+Plant_3, "Pennisetum alopecuroides", 0, -0.5, Plant
+Plant_11, "Solidago altissima", 0, -0.7857142857142857, Plantconnector
+Plant_26, "Lactuca indica", 0, 1.9285714285714286, Plantconnector
+Insect_h_15, "Uroleucon picridis", -3, -1.0, Herbivore
+Insect_h_17, "Rhopalus maculatus", -3, 1.2222222222222223, Herbivore
+Plant_19, "Lespedeza pilosa", 0, -1.2142857142857142, Plant
+Insect_h_9, "Megoura crassicauda", -3, 1.4444444444444444, Herbivore
+Plant_25, "Cerastium fontanum subsp. vulgare var. angustifolium", 0, -1.9285714285714286, Plant
+Insect_h_6, "Lymantriinae sp.", -3, 1.0, Herbivore
+Insect_h_3, "Allantus luctifer", -3, -1.6666666666666667, Herbivore
+Insect_h_12, "Formicidae sp.", -3, 0.1111111111111111, Herbivore
+Insect_h_4, "Sarcopolia illoba", -3, -0.3333333333333333, Herbivore
+Insect_h_13, "Monolepta dichroa", -3, 1.8888888888888888, Herbivore
+Insect_h_1, "Popillia japonica", -3, -1.8888888888888888, Herbivore
+Plant_2, "Sedum bulbiferum", 0, -1.5, Plant
+Plant_20, "Stellaria media", 0, -1.0714285714285714, Plant
+Plant_18, "Spiranthes sinensis var. amoena", 0, -1.7857142857142858, Plant
+Insect_h_10, "Chrysolina aurichalcea", -3, -0.7777777777777778, Herbivore
+Insect_h_8, "Basilepta fulvipes", -3, -0.1111111111111111, Herbivore
+Insect_h_11, "Cassida piperata", -3, 1.6666666666666667, Herbivore
+Insect_p_18, "Eristalis tenax", 3, -0.9, Pollinator
+Insect_p_0, "Diptera sp.", 3, -0.7, Pollinator
+Insect_p_11, "Andrenidae sp.", 3, 0.1, Pollinator
+Insect_p_7, "Pseudozizeeria maha", 3, 0.9, Pollinator
+Insect_h_0, "Stethophyma magister", -3, -0.5555555555555556, Herbivore
+Plant_11, "Solidago altissima", 0, -0.7857142857142857, Plantconnector
+Insect_h_2, "Patanga japonica", -3, 0.3333333333333333, Herbivore
+Plant_21, "Galium trachyspermum", 0, -0.9285714285714286, Plant
+Plant_9, "Kummerowia striata", 0, 1.5, Plantconnector
+Insect_p_4, "Symphyta sp.", 3, -1.9, Pollinator
+edgedef>node1 VARCHAR, node2 VARCHAR, int VARCHAR
+Plant_1, Insect_h_14, herbivory
+Plant_1, Insect_h_16, herbivory
+Insect_h_14, Plant_1, herbivory
+Insect_h_14, Plant_4, herbivory
+Insect_h_16, Plant_1, herbivory
+Insect_h_16, Plant_14, herbivory
+Plant_14, Insect_h_16, herbivory
+Plant_14, Insect_h_0, herbivory
+Plant_4, Insect_h_14, herbivory
+Plant_4, Insect_h_7, herbivory
+Insect_h_7, Plant_4, herbivory
+Plant_13, Insect_h_5, herbivory
+Insect_h_5, Plant_13, herbivory
+Plant_1, Insect_p_9, pollination
+Plant_1, Insect_p_19, pollination
+Plant_1, Insect_p_13, pollination
+Plant_1, Insect_p_3, pollination
+Plant_1, Insect_p_17, pollination
+Plant_1, Insect_p_2, pollination
+Plant_1, Insect_p_14, pollination
+Insect_p_9, Plant_1, pollination
+Insect_p_19, Plant_1, pollination
+Insect_p_19, Plant_4, pollination
+Insect_p_13, Plant_1, pollination
+Insect_p_3, Plant_1, pollination
+Insect_p_3, Plant_4, pollination
+Insect_p_3, Plant_6, pollination
+Insect_p_3, Plant_10, pollination
+Insect_p_17, Plant_1, pollination
+Insect_p_2, Plant_1, pollination
+Insect_p_2, Plant_4, pollination
+Insect_p_2, Plant_23, pollination
+Insect_p_2, Plant_6, pollination
+Insect_p_2, Plant_0, pollination
+Insect_p_2, Plant_8, pollination
+Insect_p_2, Plant_26, pollination
+Insect_p_2, Plant_24, pollination
+Insect_p_2, Plant_7, pollination
+Insect_p_2, Plant_3, pollination
+Insect_p_2, Plant_12, pollination
+Insect_p_14, Plant_1, pollination
+Insect_p_14, Plant_15, pollination
+Insect_p_14, Plant_6, pollination
+Plant_15, Insect_p_16, pollination
+Plant_15, Insect_p_6, pollination
+Plant_15, Insect_p_14, pollination
+Insect_p_16, Plant_15, pollination
+Insect_p_16, Plant_16, pollination
+Insect_p_6, Plant_15, pollination
+Insect_p_6, Plant_5, pollination
+Insect_p_6, Plant_26, pollination
+Plant_16, Insect_p_16, pollination
+Plant_16, Insect_p_5, pollination
+Insect_p_5, Plant_16, pollination
+Insect_p_5, Plant_23, pollination
+Insect_p_5, Plant_17, pollination
+Insect_p_5, Plant_26, pollination
+Insect_p_5, Plant_12, pollination
+Insect_p_5, Plant_9, pollination
+Plant_4, Insect_p_19, pollination
+Plant_4, Insect_p_1, pollination
+Plant_4, Insect_p_15, pollination
+Plant_4, Insect_p_3, pollination
+Plant_4, Insect_p_12, pollination
+Plant_4, Insect_p_2, pollination
+Plant_4, Insect_p_8, pollination
+Insect_p_1, Plant_4, pollination
+Insect_p_1, Plant_22, pollination
+Insect_p_15, Plant_4, pollination
+Insect_p_12, Plant_4, pollination
+Insect_p_12, Plant_26, pollination
+Insect_p_12, Plant_9, pollination
+Insect_p_8, Plant_4, pollination
+Insect_p_8, Plant_11, pollination
+Plant_22, Insect_p_1, pollination
+Plant_22, Insect_p_10, pollination
+Insect_p_10, Plant_22, pollination
+Insect_p_10, Plant_27, pollination
+Plant_23, Insect_p_5, pollination
+Plant_23, Insect_p_2, pollination
+Plant_17, Insect_p_5, pollination
+Plant_17, Insect_p_7, pollination
+Plant_26, Insect_p_5, pollination
+Plant_26, Insect_p_6, pollination
+Plant_26, Insect_p_12, pollination
+Plant_26, Insect_p_2, pollination
+Plant_26, Insect_p_18, pollination
+Plant_26, Insect_p_0, pollination
+Plant_26, Insect_p_11, pollination
+Plant_26, Insect_p_7, pollination
+Plant_12, Insect_p_5, pollination
+Plant_12, Insect_p_2, pollination
+Plant_12, Insect_p_4, pollination
+Plant_9, Insect_p_5, pollination
+Plant_9, Insect_p_12, pollination
+Plant_9, Insect_p_0, pollination
+Plant_9, Insect_p_11, pollination
+Plant_9, Insect_p_7, pollination
+Plant_6, Insect_p_3, pollination
+Plant_6, Insect_p_2, pollination
+Plant_6, Insect_p_14, pollination
+Plant_10, Insect_p_3, pollination
+Plant_27, Insect_p_10, pollination
+Plant_5, Insect_p_6, pollination
+Plant_0, Insect_p_2, pollination
+Plant_8, Insect_p_2, pollination
+Plant_24, Insect_p_2, pollination
+Plant_7, Insect_p_2, pollination
+Plant_3, Insect_p_2, pollination
+Plant_11, Insect_p_8, pollination
+Plant_26, Insect_h_15, herbivory
+Plant_26, Insect_h_17, herbivory
+Insect_h_15, Plant_26, herbivory
+Insect_h_17, Plant_26, herbivory
+Plant_19, Insect_h_9, herbivory
+Insect_h_9, Plant_19, herbivory
+Plant_25, Insect_h_6, herbivory
+Plant_25, Insect_h_3, herbivory
+Plant_25, Insect_h_12, herbivory
+Plant_25, Insect_h_4, herbivory
+Plant_25, Insect_h_13, herbivory
+Plant_25, Insect_h_1, herbivory
+Insect_h_6, Plant_25, herbivory
+Insect_h_3, Plant_25, herbivory
+Insect_h_3, Plant_2, herbivory
+Insect_h_3, Plant_20, herbivory
+Insect_h_12, Plant_25, herbivory
+Insect_h_4, Plant_25, herbivory
+Insect_h_13, Plant_25, herbivory
+Insect_h_1, Plant_25, herbivory
+Insect_h_1, Plant_21, herbivory
+Insect_h_1, Plant_9, herbivory
+Plant_2, Insect_h_3, herbivory
+Plant_20, Insect_h_3, herbivory
+Plant_18, Insect_h_10, herbivory
+Plant_18, Insect_h_8, herbivory
+Plant_18, Insect_h_11, herbivory
+Insect_h_10, Plant_18, herbivory
+Insect_h_8, Plant_18, herbivory
+Insect_h_11, Plant_18, herbivory
+Insect_p_18, Plant_26, pollination
+Insect_p_0, Plant_26, pollination
+Insect_p_0, Plant_9, pollination
+Insect_p_11, Plant_26, pollination
+Insect_p_11, Plant_9, pollination
+Insect_p_7, Plant_26, pollination
+Insect_p_7, Plant_17, pollination
+Insect_p_7, Plant_9, pollination
+Insect_h_0, Plant_14, herbivory
+Plant_11, Insect_h_2, herbivory
+Insect_h_2, Plant_11, herbivory
+Plant_21, Insect_h_1, herbivory
+Plant_9, Insect_h_1, herbivory
+Insect_p_4, Plant_12, pollination

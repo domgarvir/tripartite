@@ -1,0 +1,408 @@
+Crataegus monogyna,Plant,herbivory,Acleris variegana,Host,herbivory,1
+Crataegus monogyna,Plant,herbivory,Alsophila aescularia,Host,herbivory,2
+Crataegus monogyna,Plant,herbivory,Conistra ligula,Host,herbivory,37
+Crataegus monogyna,Plant,herbivory,Operophtera brumata,Host,herbivory,287
+Crataegus monogyna,Plant,herbivory,Opisthograptis luteolata,Host,herbivory,2
+Crataegus monogyna,Plant,herbivory,Parornix anglicella,Host,herbivory,2
+Crataegus monogyna,Plant,herbivory,Phyllonorycter spp.,Host,herbivory,1
+Crataegus monogyna,Plant,herbivory,Theria primaria,Host,herbivory,1
+Crataegus monogyna,Plant,herbivory,ukL200,Host,herbivory,14
+Crataegus monogyna,Plant,herbivory,ukL201,Host,herbivory,1
+Crataegus monogyna,Plant,herbivory,ukL205,Host,herbivory,1
+Acleris variegana,Host,herbivory,Crataegus monogyna,Plant,herbivory,1
+Solanum dulcamara,Plant,herbivory,Acrolepia autumnitella,Host,herbivory,1
+Acrolepia autumnitella,Host,herbivory,Solanum dulcamara,Plant,herbivory,1
+Trifolium spp.,Plant,herbivory,Agromyza nana,Host,herbivory,17
+Trifolium spp.,Plant,herbivory,Cnephasia incertana,Host,herbivory,1
+Trifolium spp.,Plant,herbivory,ukD39,Host,herbivory,3
+Agromyza nana,Host,herbivory,Trifolium spp.,Plant,herbivory,17
+Alsophila aescularia,Host,herbivory,Crataegus monogyna,Plant,herbivory,2
+Alsophila aescularia,Host,herbivory,Ulmus procera,Plant,herbivory,1
+Ulmus procera,Plant,herbivory,Alsophila aescularia,Host,herbivory,1
+Ulmus procera,Plant,herbivory,Diurnea fagella,Host,herbivory,1
+Ulmus procera,Plant,herbivory,Ennomos spp.,Host,herbivory,1
+Ulmus procera,Plant,herbivory,Operophtera brumata,Host,herbivory,215
+Ulmus procera,Plant,herbivory,Opisthograptis luteolata,Host,herbivory,1
+Ulmus procera,Plant,herbivory,Phyllonorycter spp.,Host,herbivory,1
+Ulmus procera,Plant,herbivory,Stigmella spp.,Host,herbivory,1
+Urtica dioica,Plant,herbivory,Anthophila fabriciana,Host,herbivory,28
+Urtica dioica,Plant,herbivory,Celypha lacunana,Host,herbivory,11
+Urtica dioica,Plant,herbivory,Cnephasia asseclana,Host,herbivory,1
+Urtica dioica,Plant,herbivory,Cnephasia spp.,Host,herbivory,1
+Urtica dioica,Plant,herbivory,Hypena proboscidalis,Host,herbivory,2
+Urtica dioica,Plant,herbivory,Phytomyza sp.,Host,herbivory,41
+Urtica dioica,Plant,herbivory,Pleuroptya ruralis,Host,herbivory,10
+Urtica dioica,Plant,herbivory,Polygonia c-album,Host,herbivory,1
+Urtica dioica,Plant,herbivory,ukL209,Host,herbivory,2
+Urtica dioica,Plant,herbivory,ukL62,Host,herbivory,9
+Urtica dioica,Plant,herbivory,Vanessa atalanta,Host,herbivory,2
+Anthophila fabriciana,Host,herbivory,Urtica dioica,Plant,herbivory,28
+Polygonum aviculare,Plant,herbivory,Calybites phasianipennella,Host,herbivory,5
+Polygonum aviculare,Plant,herbivory,ukD2,Host,herbivory,1
+Calybites phasianipennella,Host,herbivory,Polygonum aviculare,Plant,herbivory,5
+Prunus spinosa,Plant,herbivory,Carcina quercana,Host,herbivory,2
+Prunus spinosa,Plant,herbivory,Cnephasia asseclana,Host,herbivory,1
+Prunus spinosa,Plant,herbivory,Conistra ligula,Host,herbivory,6
+Prunus spinosa,Plant,herbivory,Ennomos spp.,Host,herbivory,1
+Prunus spinosa,Plant,herbivory,Euproctis similis,Host,herbivory,1
+Prunus spinosa,Plant,herbivory,Hedya pruniana,Host,herbivory,6
+Prunus spinosa,Plant,herbivory,Operophtera brumata,Host,herbivory,410
+Prunus spinosa,Plant,herbivory,Opisthograptis luteolata,Host,herbivory,2
+Prunus spinosa,Plant,herbivory,Stigmella plagicolella,Host,herbivory,6
+Prunus spinosa,Plant,herbivory,ukL201,Host,herbivory,1
+Prunus spinosa,Plant,herbivory,ukL202,Host,herbivory,6
+Prunus spinosa,Plant,herbivory,ukL25,Host,herbivory,6
+Prunus spinosa,Plant,herbivory,ukL96,Host,herbivory,6
+Carcina quercana,Host,herbivory,Prunus spinosa,Plant,herbivory,2
+Galium aparine,Plant,herbivory,Celypha lacunana,Host,herbivory,1
+Celypha lacunana,Host,herbivory,Galium aparine,Plant,herbivory,1
+Celypha lacunana,Host,herbivory,Rosa sp.,Plant,herbivory,1
+Celypha lacunana,Host,herbivory,Urtica dioica,Plant,herbivory,11
+Rosa sp.,Plant,herbivory,Celypha lacunana,Host,herbivory,1
+Rosa sp.,Plant,herbivory,Operophtera brumata,Host,herbivory,73
+Rosa sp.,Plant,herbivory,ukL25,Host,herbivory,6
+Holcus lanatus,Plant,herbivory,Cerodontha denticornis,Host,herbivory,1
+Holcus lanatus,Plant,herbivory,Chromatomyia milii,Host,herbivory,120
+Holcus lanatus,Plant,herbivory,Mesapamea sp.,Host,herbivory,1
+Cerodontha denticornis,Host,herbivory,Holcus lanatus,Plant,herbivory,1
+Grass unknown,Plant,herbivory,Chromatomyia ? nigra,Host,herbivory,4
+Grass unknown,Plant,herbivory,Chromatomyia milii,Host,herbivory,173
+Grass unknown,Plant,herbivory,Chromatomyia nigra,Host,herbivory,19
+Grass unknown,Plant,herbivory,Theria primaria,Host,herbivory,1
+Grass unknown,Plant,herbivory,ukL136,Host,herbivory,1
+Chromatomyia ? nigra,Host,herbivory,Grass unknown,Plant,herbivory,4
+Chromatomyia milii,Host,herbivory,Grass unknown,Plant,herbivory,173
+Chromatomyia milii,Host,herbivory,Holcus lanatus,Plant,herbivory,120
+Chromatomyia nigra,Host,herbivory,Grass unknown,Plant,herbivory,19
+Chromatomyia nigra,Host,herbivory,Hordeum vulgare,Plant,herbivory,23
+Chromatomyia nigra,Host,herbivory,Triticum sp.,Plant,herbivory,6
+Chromatomyia nigra,Host,herbivory,X Triticosecale,Plant,herbivory,1
+Hordeum vulgare,Plant,herbivory,Chromatomyia nigra,Host,herbivory,23
+Triticum sp.,Plant,herbivory,Chromatomyia nigra,Host,herbivory,6
+X Triticosecale,Plant,herbivory,Chromatomyia nigra,Host,herbivory,1
+Chenopodium polyspermum,Plant,herbivory,Chrysoesthia drurella,Host,herbivory,15
+Chenopodium polyspermum,Plant,herbivory,Paranthomyza nitida,Host,herbivory,3
+Chenopodium polyspermum,Plant,herbivory,ukL132,Host,herbivory,1
+Chrysoesthia drurella,Host,herbivory,Chenopodium polyspermum,Plant,herbivory,15
+Cnephasia asseclana,Host,herbivory,Prunus spinosa,Plant,herbivory,1
+Cnephasia asseclana,Host,herbivory,Urtica dioica,Plant,herbivory,1
+Cerastium fontanum,Plant,herbivory,Cnephasia incertana,Host,herbivory,1
+Cerastium fontanum,Plant,herbivory,Scaptomyza graminum,Host,herbivory,2
+Cnephasia incertana,Host,herbivory,Cerastium fontanum,Plant,herbivory,1
+Cnephasia incertana,Host,herbivory,Ranunculus repens,Plant,herbivory,40
+Cnephasia incertana,Host,herbivory,Trifolium spp.,Plant,herbivory,1
+Ranunculus repens,Plant,herbivory,Cnephasia incertana,Host,herbivory,40
+Ranunculus repens,Plant,herbivory,Cnephasia spp.,Host,herbivory,1
+Ranunculus repens,Plant,herbivory,Cnephasia stephensiana,Host,herbivory,1
+Ranunculus repens,Plant,herbivory,Phytomyza fallaciosa,Host,herbivory,5
+Ranunculus repens,Plant,herbivory,Phytomyza ranunculi,Host,herbivory,1874
+Ranunculus repens,Plant,herbivory,Phytomyza ranunculivora,Host,herbivory,91
+Ranunculus repens,Plant,herbivory,ukL235,Host,herbivory,8
+Cnephasia spp.,Host,herbivory,Ranunculus repens,Plant,herbivory,1
+Cnephasia spp.,Host,herbivory,Urtica dioica,Plant,herbivory,1
+Cnephasia stephensiana,Host,herbivory,Ranunculus repens,Plant,herbivory,1
+Cnephasia stephensiana,Host,herbivory,Rumex spp.,Plant,herbivory,1
+Rumex spp.,Plant,herbivory,Cnephasia stephensiana,Host,herbivory,1
+Rumex spp.,Plant,herbivory,Lonchoptera furcata,Host,herbivory,1
+Rumex spp.,Plant,herbivory,Pegomya hyoscami,Host,herbivory,26
+Rumex spp.,Plant,herbivory,Pegomya nigritarsis,Host,herbivory,2
+Rumex spp.,Plant,herbivory,ukD47,Host,herbivory,87
+Acer campestre,Plant,herbivory,Colocasia coryli,Host,herbivory,2
+Acer campestre,Plant,herbivory,Diurnea fagella,Host,herbivory,1
+Acer campestre,Plant,herbivory,Eupsilia transversa,Host,herbivory,1
+Acer campestre,Plant,herbivory,Operophtera brumata,Host,herbivory,2
+Colocasia coryli,Host,herbivory,Acer campestre,Plant,herbivory,2
+Conistra ligula,Host,herbivory,Crataegus monogyna,Plant,herbivory,37
+Conistra ligula,Host,herbivory,Prunus spinosa,Plant,herbivory,6
+Conistra ligula,Host,herbivory,Rubus fruticosus,Plant,herbivory,6
+Rubus fruticosus,Plant,herbivory,Conistra ligula,Host,herbivory,6
+Corylus avellana,Plant,herbivory,Cosmia trapezina,Host,herbivory,1
+Corylus avellana,Plant,herbivory,Diurnea fagella,Host,herbivory,1
+Corylus avellana,Plant,herbivory,Hydriomena furcata,Host,herbivory,1
+Corylus avellana,Plant,herbivory,Operophtera brumata,Host,herbivory,10
+Corylus avellana,Plant,herbivory,Parornix devoniella,Host,herbivory,2
+Corylus avellana,Plant,herbivory,Phyllonorycter coryli,Host,herbivory,23
+Corylus avellana,Plant,herbivory,Phyllonorycter nicellii,Host,herbivory,1
+Corylus avellana,Plant,herbivory,Theria primaria,Host,herbivory,1
+Corylus avellana,Plant,herbivory,ukL165,Host,herbivory,2
+Corylus avellana,Plant,herbivory,ukL200,Host,herbivory,2
+Cosmia trapezina,Host,herbivory,Corylus avellana,Plant,herbivory,1
+Diurnea fagella,Host,herbivory,Acer campestre,Plant,herbivory,1
+Diurnea fagella,Host,herbivory,Corylus avellana,Plant,herbivory,1
+Diurnea fagella,Host,herbivory,Ulmus procera,Plant,herbivory,1
+Ennomos spp.,Host,herbivory,Prunus spinosa,Plant,herbivory,1
+Ennomos spp.,Host,herbivory,Ulmus procera,Plant,herbivory,1
+Euproctis similis,Host,herbivory,Prunus spinosa,Plant,herbivory,1
+Euproctis similis,Host,herbivory,Salix sp.,Plant,herbivory,1
+Salix sp.,Plant,herbivory,Euproctis similis,Host,herbivory,1
+Eupsilia transversa,Host,herbivory,Acer campestre,Plant,herbivory,1
+Hedya pruniana,Host,herbivory,Prunus spinosa,Plant,herbivory,6
+Hydriomena furcata,Host,herbivory,Corylus avellana,Plant,herbivory,1
+Hypena proboscidalis,Host,herbivory,Urtica dioica,Plant,herbivory,2
+Lonchoptera furcata,Host,herbivory,Rumex spp.,Plant,herbivory,1
+Mesapamea sp.,Host,herbivory,Holcus lanatus,Plant,herbivory,1
+Operophtera brumata,Host,herbivory,Acer campestre,Plant,herbivory,2
+Operophtera brumata,Host,herbivory,Corylus avellana,Plant,herbivory,10
+Operophtera brumata,Host,herbivory,Crataegus monogyna,Plant,herbivory,287
+Operophtera brumata,Host,herbivory,Prunus spinosa,Plant,herbivory,410
+Operophtera brumata,Host,herbivory,Rosa sp.,Plant,herbivory,73
+Operophtera brumata,Host,herbivory,Ulmus procera,Plant,herbivory,215
+Opisthograptis luteolata,Host,herbivory,Ulmus procera,Plant,herbivory,1
+Opisthograptis luteolata,Host,herbivory,Crataegus monogyna,Plant,herbivory,2
+Opisthograptis luteolata,Host,herbivory,Prunus spinosa,Plant,herbivory,2
+Paranthomyza nitida,Host,herbivory,Chenopodium polyspermum,Plant,herbivory,3
+Parornix anglicella,Host,herbivory,Crataegus monogyna,Plant,herbivory,2
+Parornix devoniella,Host,herbivory,Corylus avellana,Plant,herbivory,2
+Pegomya hyoscami,Host,herbivory,Rumex spp.,Plant,herbivory,26
+Pegomya nigritarsis,Host,herbivory,Rumex spp.,Plant,herbivory,2
+Phyllonorycter coryli,Host,herbivory,Corylus avellana,Plant,herbivory,23
+Phyllonorycter nicellii,Host,herbivory,Corylus avellana,Plant,herbivory,1
+Phyllonorycter spp.,Host,herbivory,Crataegus monogyna,Plant,herbivory,1
+Phyllonorycter spp.,Host,herbivory,Ulmus procera,Plant,herbivory,1
+Phytomyza fallaciosa,Host,herbivory,Ranunculus repens,Plant,herbivory,5
+Ilex aquifolium,Plant,herbivory,Phytomyza ilicis,Host,herbivory,56
+Phytomyza ilicis,Host,herbivory,Ilex aquifolium,Plant,herbivory,56
+Ranunculus acris,Plant,herbivory,Phytomyza ranunculi,Host,herbivory,20
+Phytomyza ranunculi,Host,herbivory,Ranunculus acris,Plant,herbivory,20
+Phytomyza ranunculi,Host,herbivory,Ranunculus ficaria,Plant,herbivory,34
+Phytomyza ranunculi,Host,herbivory,Ranunculus repens,Plant,herbivory,1874
+Ranunculus ficaria,Plant,herbivory,Phytomyza ranunculi,Host,herbivory,34
+Phytomyza ranunculivora,Host,herbivory,Ranunculus repens,Plant,herbivory,91
+Phytomyza sp.,Host,herbivory,Urtica dioica,Plant,herbivory,41
+Cirsium arvense,Plant,herbivory,Phytomyza spinaciae,Host,herbivory,11
+Phytomyza spinaciae,Host,herbivory,Cirsium arvense,Plant,herbivory,11
+Pleuroptya ruralis,Host,herbivory,Urtica dioica,Plant,herbivory,10
+Polygonia c-album,Host,herbivory,Urtica dioica,Plant,herbivory,1
+Brassica oleracea (Acephala group),Plant,herbivory,Scaptomyza flava,Host,herbivory,15
+Scaptomyza flava,Host,herbivory,Brassica oleracea (Acephala group),Plant,herbivory,15
+Scaptomyza graminum,Host,herbivory,Cerastium fontanum,Plant,herbivory,2
+Scaptomyza graminum,Host,herbivory,Stellaria graminea,Plant,herbivory,1
+Stellaria graminea,Plant,herbivory,Scaptomyza graminum,Host,herbivory,1
+Stigmella plagicolella,Host,herbivory,Prunus spinosa,Plant,herbivory,6
+Stigmella spp.,Host,herbivory,Ulmus procera,Plant,herbivory,1
+Theria primaria,Host,herbivory,Corylus avellana,Plant,herbivory,1
+Theria primaria,Host,herbivory,Crataegus monogyna,Plant,herbivory,1
+Theria primaria,Host,herbivory,Grass unknown,Plant,herbivory,1
+Glechoma hederacea,Plant,herbivory,ukD10,Host,herbivory,1
+ukD10,Host,herbivory,Glechoma hederacea,Plant,herbivory,1
+Dactylis glomerata,Plant,herbivory,ukD15,Host,herbivory,2
+ukD15,Host,herbivory,Dactylis glomerata,Plant,herbivory,2
+ukD2,Host,herbivory,Polygonum aviculare,Plant,herbivory,1
+Anthriscus sylvestris,Plant,herbivory,ukD3,Host,herbivory,7
+Anthriscus sylvestris,Plant,herbivory,ukL128,Host,herbivory,1
+ukD3,Host,herbivory,Anthriscus sylvestris,Plant,herbivory,7
+Poa annua,Plant,herbivory,ukD31,Host,herbivory,1
+ukD31,Host,herbivory,Poa annua,Plant,herbivory,1
+ukD31,Host,herbivory,Poa trivialis,Plant,herbivory,3
+Poa trivialis,Plant,herbivory,ukD31,Host,herbivory,3
+Lolium multiflorum,Plant,herbivory,ukD32,Host,herbivory,1
+ukD32,Host,herbivory,Lolium multiflorum,Plant,herbivory,1
+ukD32,Host,herbivory,Lolium perenne,Plant,herbivory,3
+Lolium perenne,Plant,herbivory,ukD32,Host,herbivory,3
+ukD39,Host,herbivory,Trifolium spp.,Plant,herbivory,3
+ukD47,Host,herbivory,Rumex spp.,Plant,herbivory,87
+ukL128,Host,herbivory,Anthriscus sylvestris,Plant,herbivory,1
+ukL132,Host,herbivory,Chenopodium polyspermum,Plant,herbivory,1
+ukL136,Host,herbivory,Grass unknown,Plant,herbivory,1
+ukL165,Host,herbivory,Corylus avellana,Plant,herbivory,2
+ukL200,Host,herbivory,Corylus avellana,Plant,herbivory,2
+ukL200,Host,herbivory,Crataegus monogyna,Plant,herbivory,14
+ukL201,Host,herbivory,Crataegus monogyna,Plant,herbivory,1
+ukL201,Host,herbivory,Prunus spinosa,Plant,herbivory,1
+ukL202,Host,herbivory,Prunus spinosa,Plant,herbivory,6
+ukL205,Host,herbivory,Crataegus monogyna,Plant,herbivory,1
+ukL209,Host,herbivory,Urtica dioica,Plant,herbivory,2
+ukL235,Host,herbivory,Ranunculus repens,Plant,herbivory,8
+ukL25,Host,herbivory,Prunus spinosa,Plant,herbivory,6
+ukL25,Host,herbivory,Rosa sp.,Plant,herbivory,6
+ukL62,Host,herbivory,Urtica dioica,Plant,herbivory,9
+ukL96,Host,herbivory,Prunus spinosa,Plant,herbivory,6
+Vanessa atalanta,Host,herbivory,Urtica dioica,Plant,herbivory,2
+Phytomyza ranunculi,Host,parasitism,Achrysocharoides cilla,Parasitoid,parasitism,1
+Phytomyza ranunculi,Host,parasitism,Achrysocharoides splendens,Parasitoid,parasitism,1
+Phytomyza ranunculi,Host,parasitism,Chrysocharis liriomyzae,Parasitoid,parasitism,1
+Phytomyza ranunculi,Host,parasitism,Chrysocharis pentheus,Parasitoid,parasitism,52
+Phytomyza ranunculi,Host,parasitism,Chrysocharis sp.,Parasitoid,parasitism,1
+Phytomyza ranunculi,Host,parasitism,Cirrospilus pictus,Parasitoid,parasitism,10
+Phytomyza ranunculi,Host,parasitism,Colastes braconius,Parasitoid,parasitism,5
+Phytomyza ranunculi,Host,parasitism,Dacnusa areolaris,Parasitoid,parasitism,474
+Phytomyza ranunculi,Host,parasitism,Dacnusa confinis,Parasitoid,parasitism,17
+Phytomyza ranunculi,Host,parasitism,Dacnusa macrospila,Parasitoid,parasitism,58
+Phytomyza ranunculi,Host,parasitism,Dacnusa tarsalis,Parasitoid,parasitism,452
+Phytomyza ranunculi,Host,parasitism,Diglyphus isaea,Parasitoid,parasitism,19
+Phytomyza ranunculi,Host,parasitism,Hemiptarsenus fulvicollis,Parasitoid,parasitism,2
+Phytomyza ranunculi,Host,parasitism,Hemiptarsenus ornatus,Parasitoid,parasitism,6
+Phytomyza ranunculi,Host,parasitism,Hemiptarsenus unguicellus,Parasitoid,parasitism,1
+Phytomyza ranunculi,Host,parasitism,Miscogaster maculata,Parasitoid,parasitism,35
+Phytomyza ranunculi,Host,parasitism,Phaedrotoma exigua,Parasitoid,parasitism,1
+Phytomyza ranunculi,Host,parasitism,Pnigalio soemius,Parasitoid,parasitism,2
+Phytomyza ranunculi,Host,parasitism,Seladerma tarsale,Parasitoid,parasitism,8
+Achrysocharoides cilla,Parasitoid,parasitism,Phytomyza ranunculi,Host,parasitism,1
+Achrysocharoides splendens,Parasitoid,parasitism,Phytomyza ranunculi,Host,parasitism,1
+Operophtera brumata,Host,parasitism,Apanteles candidatus,Parasitoid,parasitism,6
+Operophtera brumata,Host,parasitism,Cotesia jucunda,Parasitoid,parasitism,6
+Operophtera brumata,Host,parasitism,Opius pallipes,Parasitoid,parasitism,1
+Operophtera brumata,Host,parasitism,Protapanteles delitutus,Parasitoid,parasitism,6
+Apanteles candidatus,Parasitoid,parasitism,Operophtera brumata,Host,parasitism,6
+Phyllonorycter spp.,Host,parasitism,Apanteles circumscriptus,Parasitoid,parasitism,1
+Apanteles circumscriptus,Parasitoid,parasitism,Phyllonorycter spp.,Host,parasitism,1
+Vanessa atalanta,Host,parasitism,Apechthis compunctor,Parasitoid,parasitism,1
+Vanessa atalanta,Host,parasitism,Microgaster subcompleta,Parasitoid,parasitism,1
+Apechthis compunctor,Parasitoid,parasitism,Vanessa atalanta,Host,parasitism,1
+ukD47,Host,parasitism,Apodesmia rufipes,Parasitoid,parasitism,3
+ukD47,Host,parasitism,Biosteres carbonarius,Parasitoid,parasitism,1
+ukD47,Host,parasitism,Dapsilarthra florimela,Parasitoid,parasitism,4
+Apodesmia rufipes,Parasitoid,parasitism,ukD47,Host,parasitism,3
+Biosteres carbonarius,Parasitoid,parasitism,ukD47,Host,parasitism,1
+ukL136,Host,parasitism,Campoplex sp.,Parasitoid,parasitism,1
+Campoplex sp.,Parasitoid,parasitism,ukL136,Host,parasitism,1
+Chromatomyia milii,Host,parasitism,Chorebus aphantus,Parasitoid,parasitism,5
+Chromatomyia milii,Host,parasitism,Colastes braconius,Parasitoid,parasitism,1
+Chromatomyia milii,Host,parasitism,Cyrtogaster vulgaris,Parasitoid,parasitism,1
+Chromatomyia milii,Host,parasitism,Dacnusa areolaris,Parasitoid,parasitism,60
+Chromatomyia milii,Host,parasitism,Dacnusa confinis,Parasitoid,parasitism,29
+Chromatomyia milii,Host,parasitism,Dacnusa faeroensis,Parasitoid,parasitism,1
+Chromatomyia milii,Host,parasitism,Dacnusa macrospila,Parasitoid,parasitism,2
+Chromatomyia milii,Host,parasitism,Dacnusa maculipes,Parasitoid,parasitism,31
+Chromatomyia milii,Host,parasitism,Dacnusa sp.,Parasitoid,parasitism,12
+Chromatomyia milii,Host,parasitism,Dacnusa tarsalis,Parasitoid,parasitism,6
+Chromatomyia milii,Host,parasitism,Diglyphus isaea,Parasitoid,parasitism,6
+Chromatomyia milii,Host,parasitism,Hemiptarsenus fulvicollis,Parasitoid,parasitism,1
+Chromatomyia milii,Host,parasitism,Hemiptarsenus ornatus,Parasitoid,parasitism,4
+Chromatomyia milii,Host,parasitism,Hemiptarsenus unguicellus,Parasitoid,parasitism,1
+Chromatomyia milii,Host,parasitism,Heterolexis balteata,Parasitoid,parasitism,1
+Chromatomyia milii,Host,parasitism,Phaedrotoma exigua,Parasitoid,parasitism,2
+Chromatomyia milii,Host,parasitism,Pnigalio pectinicornis,Parasitoid,parasitism,1
+Chromatomyia milii,Host,parasitism,Seladerma tarsale,Parasitoid,parasitism,1
+Chorebus aphantus,Parasitoid,parasitism,Chromatomyia milii,Host,parasitism,5
+Chorebus aphantus,Parasitoid,parasitism,ukD31,Host,parasitism,4
+ukD31,Host,parasitism,Chorebus aphantus,Parasitoid,parasitism,4
+Phytomyza sp.,Host,parasitism,Chorebus lateralis,Parasitoid,parasitism,1
+Phytomyza sp.,Host,parasitism,Colastes braconius,Parasitoid,parasitism,1
+Phytomyza sp.,Host,parasitism,Dacnusa macrospila,Parasitoid,parasitism,1
+Phytomyza sp.,Host,parasitism,Exotela flavicoxa,Parasitoid,parasitism,3
+Phytomyza sp.,Host,parasitism,Miscogaster rufipes,Parasitoid,parasitism,1
+Phytomyza sp.,Host,parasitism,Phaedrotoma reconditor,Parasitoid,parasitism,1
+Phytomyza sp.,Host,parasitism,Phaedrotoma reptantis,Parasitoid,parasitism,1
+Chorebus lateralis,Parasitoid,parasitism,Phytomyza sp.,Host,parasitism,1
+Chrysocharis liriomyzae,Parasitoid,parasitism,Phytomyza ranunculi,Host,parasitism,1
+Chrysocharis liriomyzae,Parasitoid,parasitism,Phytomyza ranunculivora,Host,parasitism,1
+Phytomyza ranunculivora,Host,parasitism,Chrysocharis liriomyzae,Parasitoid,parasitism,1
+Phytomyza ranunculivora,Host,parasitism,Dacnusa areolaris,Parasitoid,parasitism,2
+Phytomyza ranunculivora,Host,parasitism,Dacnusa macrospila,Parasitoid,parasitism,6
+Phytomyza ranunculivora,Host,parasitism,Dacnusa sp.,Parasitoid,parasitism,6
+Phytomyza ranunculivora,Host,parasitism,Dacnusa tarsalis,Parasitoid,parasitism,3
+Phytomyza ranunculivora,Host,parasitism,Diglyphus isaea,Parasitoid,parasitism,26
+Phytomyza ranunculivora,Host,parasitism,Hemiptarsenus fulvicollis,Parasitoid,parasitism,3
+Phytomyza ranunculivora,Host,parasitism,Hemiptarsenus ornatus,Parasitoid,parasitism,2
+Phytomyza ranunculivora,Host,parasitism,Pnigalio soemius,Parasitoid,parasitism,1
+Agromyza nana,Host,parasitism,Chrysocharis orbicularis,Parasitoid,parasitism,2
+Agromyza nana,Host,parasitism,Opius funebris,Parasitoid,parasitism,1
+Chrysocharis orbicularis,Parasitoid,parasitism,Agromyza nana,Host,parasitism,2
+Scaptomyza flava,Host,parasitism,Chrysocharis pallipes,Parasitoid,parasitism,2
+Scaptomyza flava,Host,parasitism,Dacnusa macrospila,Parasitoid,parasitism,1
+Scaptomyza flava,Host,parasitism,Dacnusa temula,Parasitoid,parasitism,1
+Chrysocharis pallipes,Parasitoid,parasitism,Scaptomyza flava,Host,parasitism,2
+Phytomyza fallaciosa,Host,parasitism,Chrysocharis pentheus,Parasitoid,parasitism,1
+Chrysocharis pentheus,Parasitoid,parasitism,Phytomyza fallaciosa,Host,parasitism,1
+Chrysocharis pentheus,Parasitoid,parasitism,Phytomyza ranunculi,Host,parasitism,52
+Phytomyza spinaciae,Host,parasitism,Chrysocharis pubicornis,Parasitoid,parasitism,1
+Phytomyza spinaciae,Host,parasitism,Seladerma diffine,Parasitoid,parasitism,1
+Chrysocharis pubicornis,Parasitoid,parasitism,Phytomyza spinaciae,Host,parasitism,1
+Chrysocharis sp.,Parasitoid,parasitism,Phytomyza ranunculi,Host,parasitism,1
+Cirrospilus pictus,Parasitoid,parasitism,Phytomyza ranunculi,Host,parasitism,10
+Colastes braconius,Parasitoid,parasitism,Phytomyza ranunculi,Host,parasitism,5
+Colastes braconius,Parasitoid,parasitism,Phytomyza sp.,Host,parasitism,1
+Colastes braconius,Parasitoid,parasitism,Chromatomyia milii,Host,parasitism,1
+Cotesia jucunda,Parasitoid,parasitism,Operophtera brumata,Host,parasitism,6
+Cyrtogaster vulgaris,Parasitoid,parasitism,Chromatomyia milii,Host,parasitism,1
+Dacnusa areolaris,Parasitoid,parasitism,Chromatomyia milii,Host,parasitism,60
+Dacnusa areolaris,Parasitoid,parasitism,Chromatomyia nigra,Host,parasitism,5
+Dacnusa areolaris,Parasitoid,parasitism,Phytomyza ranunculi,Host,parasitism,474
+Dacnusa areolaris,Parasitoid,parasitism,Phytomyza ranunculivora,Host,parasitism,2
+Dacnusa areolaris,Parasitoid,parasitism,ukD3,Host,parasitism,2
+Dacnusa areolaris,Parasitoid,parasitism,ukD32,Host,parasitism,2
+Chromatomyia nigra,Host,parasitism,Dacnusa areolaris,Parasitoid,parasitism,5
+Chromatomyia nigra,Host,parasitism,Dacnusa confinis,Parasitoid,parasitism,1
+Chromatomyia nigra,Host,parasitism,Dacnusa sp.,Parasitoid,parasitism,3
+Chromatomyia nigra,Host,parasitism,Diglyphus isaea,Parasitoid,parasitism,7
+Chromatomyia nigra,Host,parasitism,Hemiptarsenus fulvicollis,Parasitoid,parasitism,1
+Chromatomyia nigra,Host,parasitism,Heterolexis balteata,Parasitoid,parasitism,3
+ukD3,Host,parasitism,Dacnusa areolaris,Parasitoid,parasitism,2
+ukD32,Host,parasitism,Dacnusa areolaris,Parasitoid,parasitism,2
+Dacnusa confinis,Parasitoid,parasitism,Chromatomyia milii,Host,parasitism,29
+Dacnusa confinis,Parasitoid,parasitism,Chromatomyia nigra,Host,parasitism,1
+Dacnusa confinis,Parasitoid,parasitism,Phytomyza ranunculi,Host,parasitism,17
+Dacnusa faeroensis,Parasitoid,parasitism,Chromatomyia milii,Host,parasitism,1
+Dacnusa macrospila,Parasitoid,parasitism,Phytomyza ranunculi,Host,parasitism,58
+Dacnusa macrospila,Parasitoid,parasitism,Chromatomyia milii,Host,parasitism,2
+Dacnusa macrospila,Parasitoid,parasitism,Phytomyza ranunculivora,Host,parasitism,6
+Dacnusa macrospila,Parasitoid,parasitism,Scaptomyza flava,Host,parasitism,1
+Dacnusa macrospila,Parasitoid,parasitism,Phytomyza sp.,Host,parasitism,1
+Dacnusa maculipes,Parasitoid,parasitism,Chromatomyia milii,Host,parasitism,31
+Dacnusa maculipes,Parasitoid,parasitism,ukD15,Host,parasitism,1
+ukD15,Host,parasitism,Dacnusa maculipes,Parasitoid,parasitism,1
+Dacnusa sp.,Parasitoid,parasitism,Chromatomyia milii,Host,parasitism,12
+Dacnusa sp.,Parasitoid,parasitism,Chromatomyia nigra,Host,parasitism,3
+Dacnusa sp.,Parasitoid,parasitism,Phytomyza ranunculivora,Host,parasitism,6
+Dacnusa tarsalis,Parasitoid,parasitism,Phytomyza ranunculivora,Host,parasitism,3
+Dacnusa tarsalis,Parasitoid,parasitism,Chromatomyia milii,Host,parasitism,6
+Dacnusa tarsalis,Parasitoid,parasitism,Phytomyza ranunculi,Host,parasitism,452
+Dacnusa temula,Parasitoid,parasitism,Scaptomyza flava,Host,parasitism,1
+Dapsilarthra florimela,Parasitoid,parasitism,ukD47,Host,parasitism,4
+Cnephasia incertana,Host,parasitism,Diadegma sp. G,Parasitoid,parasitism,8
+Diadegma sp. G,Parasitoid,parasitism,Cnephasia incertana,Host,parasitism,8
+Diglyphus isaea,Parasitoid,parasitism,Chromatomyia milii,Host,parasitism,6
+Diglyphus isaea,Parasitoid,parasitism,Chromatomyia nigra,Host,parasitism,7
+Diglyphus isaea,Parasitoid,parasitism,Phytomyza ranunculi,Host,parasitism,19
+Diglyphus isaea,Parasitoid,parasitism,Phytomyza ranunculivora,Host,parasitism,26
+Exotela flavicoxa,Parasitoid,parasitism,Phytomyza sp.,Host,parasitism,3
+Hemiptarsenus fulvicollis,Parasitoid,parasitism,Phytomyza ranunculi,Host,parasitism,2
+Hemiptarsenus fulvicollis,Parasitoid,parasitism,Chromatomyia milii,Host,parasitism,1
+Hemiptarsenus fulvicollis,Parasitoid,parasitism,Chromatomyia nigra,Host,parasitism,1
+Hemiptarsenus fulvicollis,Parasitoid,parasitism,Phytomyza ranunculivora,Host,parasitism,3
+Hemiptarsenus ornatus,Parasitoid,parasitism,Chromatomyia milii,Host,parasitism,4
+Hemiptarsenus ornatus,Parasitoid,parasitism,Pegomya hyoscami,Host,parasitism,1
+Hemiptarsenus ornatus,Parasitoid,parasitism,Phytomyza ranunculi,Host,parasitism,6
+Hemiptarsenus ornatus,Parasitoid,parasitism,Phytomyza ranunculivora,Host,parasitism,2
+Pegomya hyoscami,Host,parasitism,Hemiptarsenus ornatus,Parasitoid,parasitism,1
+Pegomya hyoscami,Host,parasitism,Pediobius metallicus,Parasitoid,parasitism,1
+Hemiptarsenus unguicellus,Parasitoid,parasitism,Chromatomyia milii,Host,parasitism,1
+Hemiptarsenus unguicellus,Parasitoid,parasitism,Phytomyza ranunculi,Host,parasitism,1
+Heterolexis balteata,Parasitoid,parasitism,Chromatomyia milii,Host,parasitism,1
+Heterolexis balteata,Parasitoid,parasitism,Chromatomyia nigra,Host,parasitism,3
+ukL132,Host,parasitism,Hyposoter sp. B,Parasitoid,parasitism,1
+Hyposoter sp. B,Parasitoid,parasitism,ukL132,Host,parasitism,1
+Conistra ligula,Host,parasitism,Macrocentrus pallipes,Parasitoid,parasitism,31
+Macrocentrus pallipes,Parasitoid,parasitism,Conistra ligula,Host,parasitism,31
+Anthophila fabriciana,Host,parasitism,Meteorus colon,Parasitoid,parasitism,1
+Anthophila fabriciana,Host,parasitism,Microgaster subcompleta,Parasitoid,parasitism,1
+Anthophila fabriciana,Host,parasitism,Triclistus anthophilae,Parasitoid,parasitism,1
+Meteorus colon,Parasitoid,parasitism,Anthophila fabriciana,Host,parasitism,1
+ukL62,Host,parasitism,Microgaster sp.,Parasitoid,parasitism,1
+Microgaster sp.,Parasitoid,parasitism,ukL62,Host,parasitism,1
+Microgaster subcompleta,Parasitoid,parasitism,Anthophila fabriciana,Host,parasitism,1
+Microgaster subcompleta,Parasitoid,parasitism,Vanessa atalanta,Host,parasitism,1
+Miscogaster maculata,Parasitoid,parasitism,Phytomyza ranunculi,Host,parasitism,35
+Miscogaster rufipes,Parasitoid,parasitism,Phytomyza sp.,Host,parasitism,1
+Opius funebris,Parasitoid,parasitism,Agromyza nana,Host,parasitism,1
+Opius pallipes,Parasitoid,parasitism,Operophtera brumata,Host,parasitism,1
+Pediobius metallicus,Parasitoid,parasitism,Pegomya hyoscami,Host,parasitism,1
+Phyllonorycter coryli,Host,parasitism,Pediobius saulius,Parasitoid,parasitism,1
+Pediobius saulius,Parasitoid,parasitism,Phyllonorycter coryli,Host,parasitism,1
+Phaedrotoma exigua,Parasitoid,parasitism,Chromatomyia milii,Host,parasitism,2
+Phaedrotoma exigua,Parasitoid,parasitism,Phytomyza ranunculi,Host,parasitism,1
+Phaedrotoma reconditor,Parasitoid,parasitism,Phytomyza sp.,Host,parasitism,1
+Phaedrotoma reptantis,Parasitoid,parasitism,Phytomyza sp.,Host,parasitism,1
+ukL128,Host,parasitism,Phaeogenes sp.,Parasitoid,parasitism,1
+Phaeogenes sp.,Parasitoid,parasitism,ukL128,Host,parasitism,1
+Pnigalio pectinicornis,Parasitoid,parasitism,Chromatomyia milii,Host,parasitism,1
+Pnigalio soemius,Parasitoid,parasitism,Phytomyza ranunculi,Host,parasitism,2
+Pnigalio soemius,Parasitoid,parasitism,Phytomyza ranunculivora,Host,parasitism,1
+Protapanteles delitutus,Parasitoid,parasitism,Operophtera brumata,Host,parasitism,6
+Seladerma diffine,Parasitoid,parasitism,Phytomyza spinaciae,Host,parasitism,1
+Seladerma tarsale,Parasitoid,parasitism,Chromatomyia milii,Host,parasitism,1
+Seladerma tarsale,Parasitoid,parasitism,Phytomyza ranunculi,Host,parasitism,8
+ukL25,Host,parasitism,Tranosema sp.,Parasitoid,parasitism,6
+Tranosema sp.,Parasitoid,parasitism,ukL25,Host,parasitism,6
+Triclistus anthophilae,Parasitoid,parasitism,Anthophila fabriciana,Host,parasitism,1

@@ -1,0 +1,13 @@
+The Code used to study tripartite ecological networks is organized as follows:
+
+PART 1: SIMULATION 
+In this folder are the codes of the simulations used to study the structure of networks vs their randomizations and its robustness to the loss of plant species.
+It reads the network files (/Networks_DB), runs, and output the extinction areas (/OUTPUT/Data/Ext_Areas) so different databases can be constructed (/OUTPUT/Data/Networks_df_*.csv) and studied in next part. It is not neccesary to perform the analysis, since the databases used in the study are provided in (/OUTPUT/Data/Networks_df_*) and in (/OUTPUT/Data/Ext_Areas/Node_impact_*)
+
+PART 2: ANALYSIS
+In this folder are the files used to study the output of the simulations (PART 1) and obtain the figures and tables shown in the manuscript and SI. 
+It reads the network files (/Networks_DB) and robustness database (/OUTPUT/Data/Networks_df_*.csv) and output figures and tables (/OUTPUT/Images).
+
+All codes are written on python (python 3.7) and uses the library pymnet http://www.mkivela.com/pymnet/
+
+Further instructions are provided in each folder: PART 1 for simulations and PART2 for analysis of results.

@@ -1,0 +1,37 @@
+Codes for analysis the databases of extinction areas and structure of the tripartite networks. 
+
+Basic functions required to work with tripartite networks are in Mnetworks.py, functions dealing with measurements on networks in Metrics.py and functions required to plot figures in Graphics.py.
+
+Different files (named with the same name as the figure) generate the figures shown in the main text as well as in the SI.
+
+To generate the figures just run:
+
+python FIGURE_X.py 
+
+
+
+FIG_S2_DH_and_Dcorr.py: study of degree distributions and correlations in tripartite networks
+Generates Figure S2 and Table 1  
+
+FIG_S3A_Node_properties_by_set: Study of degree distributions by species set.
+Generates Figures S3 A and C, and saves the degree heterogeneity by species sets in empirical networks in the file in DH_by_sets_df_emp.csv  and the comparison with randomizations (nullmodel NL) in DHZSC_by_sets_df_NL_200.csv  (to avoid computing the randomizations each time the figure is generated).
+
+FIG_S3B_layer_properties.py: Study of degree-degree correlations by interaction layer.
+Generates FIGURES S3 B and D, and saves the degree-degree correlations by interaction layer in empirical networks in r_by_layers_df_emp.csv and the comparison with randomizations (null model K) in rZSC_by_layers_df_K_200.csv (to avoid computing the randomizations each time the figure is generated).
+
+FIG_S5: Study of the structural features of connector nodes in empirical and randomized networks
+
+FIG_S6: Study of interconnectance in empirical tripartite networks and z-score of interconnectance, in the 4 null models.
+
+FIG_S7: Study of correlation between interdependence and different structural properties of the empirical tripartite networks
+
+FIG S8: Study of the extinction are of the empirical tripartite networks in three extinction scenarios: RND (random species removal, covered in the main text), by Decreasing total degree (DD) and by increasing total degree (DD)
+
+FIG S9: Study of the extinction area of empirical tripartite networks and zscore of the extinction area, in the 4 null models.
+
+FIG S10: Study of the extinction area of tripartite networks as an estimation of the extinction area of the 2 bipartite networks composing it.
+
+FIG S11 and S12: Study of correlation between extinction area and different structural properties of the tripartite ecological networks.
+
+
+

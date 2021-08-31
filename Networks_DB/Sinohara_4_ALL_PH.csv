@@ -1,0 +1,222 @@
+Amphicarpaea bracteata subsp. edgeworthii var. japonica,Plant,herbivory,Anomala albopilosa,Insect_h,herbivory,1
+Amphicarpaea bracteata subsp. edgeworthii var. japonica,Plant,herbivory,Sternuchopsis trifidus,Insect_h,herbivory,1
+Amphicarpaea bracteata subsp. edgeworthii var. japonica,Plant,herbivory,Atractomorpha lata,Insect_h,herbivory,1
+Amphicarpaea bracteata subsp. edgeworthii var. japonica,Plant,herbivory,Episomus turritus,Insect_h,herbivory,1
+Amphicarpaea bracteata subsp. edgeworthii var. japonica,Plant,herbivory,Phaneroptera falcata,Insect_h,herbivory,1
+Amphicarpaea bracteata subsp. edgeworthii var. japonica,Plant,herbivory,Clanis bilineata,Insect_h,herbivory,4
+Amphicarpaea bracteata subsp. edgeworthii var. japonica,Plant,herbivory,Homoeocerus unipunctatus,Insect_h,herbivory,8
+Amphicarpaea bracteata subsp. edgeworthii var. japonica,Plant,herbivory,Mimela splendens,Insect_h,herbivory,4
+Amphicarpaea bracteata subsp. edgeworthii var. japonica,Plant,herbivory,Lixus depressipennis,Insect_h,herbivory,1
+Amphicarpaea bracteata subsp. edgeworthii var. japonica,Plant,herbivory,Arctiidae sp.,Insect_h,herbivory,1
+Amphicarpaea bracteata subsp. edgeworthii var. japonica,Plant,herbivory,Homoeocerus striicornis,Insect_h,herbivory,1
+Amphicarpaea bracteata subsp. edgeworthii var. japonica,Plant,herbivory,Heteroptera sp.,Insect_h,herbivory,1
+Amphicarpaea bracteata subsp. edgeworthii var. japonica,Plant,herbivory,Eugnathus distinctus,Insect_h,herbivory,5
+Anomala albopilosa,Insect_h,herbivory,Amphicarpaea bracteata subsp. edgeworthii var. japonica,Plant,herbivory,1
+Veronica peregrina,Plant,herbivory,Altica oleracea,Insect_h,herbivory,1
+Veronica peregrina,Plant,herbivory,Popillia japonica,Insect_h,herbivory,1
+Altica oleracea,Insect_h,herbivory,Veronica peregrina,Plant,herbivory,1
+Glechoma hederacea subsp. grandis,Plant,herbivory,Formicidae sp.,Insect_h,herbivory,1
+Glechoma hederacea subsp. grandis,Plant,herbivory,Parasa lepida,Insect_h,herbivory,1
+Glechoma hederacea subsp. grandis,Plant,herbivory,Psychidae sp.,Insect_h,herbivory,2
+Glechoma hederacea subsp. grandis,Plant,herbivory,Eumolpinae sp.,Insect_h,herbivory,1
+Glechoma hederacea subsp. grandis,Plant,herbivory,Sternuchopsis trifidus,Insect_h,herbivory,1
+Formicidae sp.,Insect_h,herbivory,Glechoma hederacea subsp. grandis,Plant,herbivory,1
+Formicidae sp.,Insect_h,herbivory,Cerastium fontanum subsp. vulgare var. angustifolium,Plant,herbivory,1
+Sternuchopsis trifidus,Insect_h,herbivory,Amphicarpaea bracteata subsp. edgeworthii var. japonica,Plant,herbivory,1
+Sternuchopsis trifidus,Insect_h,herbivory,Glechoma hederacea subsp. grandis,Plant,herbivory,1
+Atractomorpha lata,Insect_h,herbivory,Amphicarpaea bracteata subsp. edgeworthii var. japonica,Plant,herbivory,1
+Episomus turritus,Insect_h,herbivory,Amphicarpaea bracteata subsp. edgeworthii var. japonica,Plant,herbivory,1
+Phaneroptera falcata,Insect_h,herbivory,Amphicarpaea bracteata subsp. edgeworthii var. japonica,Plant,herbivory,1
+Clanis bilineata,Insect_h,herbivory,Amphicarpaea bracteata subsp. edgeworthii var. japonica,Plant,herbivory,4
+Parasa lepida,Insect_h,herbivory,Glechoma hederacea subsp. grandis,Plant,herbivory,1
+Homoeocerus unipunctatus,Insect_h,herbivory,Amphicarpaea bracteata subsp. edgeworthii var. japonica,Plant,herbivory,8
+Psychidae sp.,Insect_h,herbivory,Glechoma hederacea subsp. grandis,Plant,herbivory,2
+Psychidae sp.,Insect_h,herbivory,Arthraxon hispidus,Plant,herbivory,1
+Amphicarpaea bracteata subsp. edgeworthii var. japonica,Plant,pollination,Parnara guttata,Insect_p,pollination,3
+Amphicarpaea bracteata subsp. edgeworthii var. japonica,Plant,pollination,Andrenidae sp. 1,Insect_p,pollination,3
+Amphicarpaea bracteata subsp. edgeworthii var. japonica,Plant,pollination,Andrenidae sp. 2,Insect_p,pollination,2
+Amphicarpaea bracteata subsp. edgeworthii var. japonica,Plant,pollination,Pseudozizeeria maha,Insect_p,pollination,1
+Parnara guttata,Insect_p,pollination,Amphicarpaea bracteata subsp. edgeworthii var. japonica,Plant,pollination,3
+Parnara guttata,Insect_p,pollination,Cocculus orbiculatus,Plant,pollination,1
+Cocculus orbiculatus,Plant,pollination,Parnara guttata,Insect_p,pollination,1
+Andrenidae sp. 1,Insect_p,pollination,Amphicarpaea bracteata subsp. edgeworthii var. japonica,Plant,pollination,3
+Andrenidae sp. 2,Insect_p,pollination,Amphicarpaea bracteata subsp. edgeworthii var. japonica,Plant,pollination,2
+Persicaria hydropiper,Plant,pollination,Episyrphus balteatus,Insect_p,pollination,1
+Persicaria hydropiper,Plant,pollination,Mesembrius flaviceps,Insect_p,pollination,4
+Persicaria hydropiper,Plant,pollination,Sphaerophoria macrogaster,Insect_p,pollination,3
+Episyrphus balteatus,Insect_p,pollination,Persicaria hydropiper,Plant,pollination,1
+Episyrphus balteatus,Insect_p,pollination,Hydrocotyle sibthorpioides,Plant,pollination,2
+Pseudozizeeria maha,Insect_p,pollination,Amphicarpaea bracteata subsp. edgeworthii var. japonica,Plant,pollination,1
+Ixeridium dentatum,Plant,herbivory,Aphidoidea,Insect_h,herbivory,1
+Ixeridium dentatum,Plant,herbivory,Cucullia fraterna,Insect_h,herbivory,2
+Aphidoidea,Insect_h,herbivory,Ixeridium dentatum,Plant,herbivory,1
+Commelina communis,Plant,herbivory,Piezodorus hybneri,Insect_h,herbivory,4
+Commelina communis,Plant,herbivory,Riptortus linearis,Insect_h,herbivory,1
+Commelina communis,Plant,herbivory,Riptortus pedestris,Insect_h,herbivory,1
+Commelina communis,Plant,herbivory,Eurema mandarina_herbivory,Insect_h,herbivory,1
+Piezodorus hybneri,Insect_h,herbivory,Commelina communis,Plant,herbivory,4
+Riptortus linearis,Insect_h,herbivory,Commelina communis,Plant,herbivory,1
+Cucullia fraterna,Insect_h,herbivory,Ixeridium dentatum,Plant,herbivory,2
+Leucanthemum Mill.,Plant,herbivory,Ascotis selenaria,Insect_h,herbivory,1
+Leucanthemum Mill.,Plant,herbivory,Uroleucon nigrotuberculatum,Insect_h,herbivory,2
+Leucanthemum Mill.,Plant,herbivory,Aphidoidea sp.1,Insect_h,herbivory,1
+Ascotis selenaria,Insect_h,herbivory,Leucanthemum Mill.,Plant,herbivory,1
+Ixeridium dentatum,Plant,pollination,Eurema mandarina,Insect_p,pollination,2
+Eurema mandarina,Insect_p,pollination,Ixeridium dentatum,Plant,pollination,2
+Eurema mandarina,Insect_p,pollination,Commelina communis,Plant,pollination,10
+Eurema mandarina,Insect_p,pollination,Veronica peregrina,Plant,pollination,1
+Eurema mandarina,Insect_p,pollination,Equisetum arvense,Plant,pollination,1
+Eurema mandarina,Insect_p,pollination,Vicia sativa subsp. nigra,Plant,pollination,12
+Eurema mandarina,Insect_p,pollination,Trifolium dubium,Plant,pollination,1
+Eurema mandarina,Insect_p,pollination,Conyza canadensis,Plant,pollination,2
+Commelina communis,Plant,pollination,Eurema mandarina,Insect_p,pollination,10
+Veronica peregrina,Plant,pollination,Eurema mandarina,Insect_p,pollination,1
+Equisetum arvense,Plant,pollination,Eurema mandarina,Insect_p,pollination,1
+Equisetum arvense,Plant,pollination,Everes argiades,Insect_p,pollination,10
+Mesembrius flaviceps,Insect_p,pollination,Persicaria hydropiper,Plant,pollination,4
+Everes argiades,Insect_p,pollination,Equisetum arvense,Plant,pollination,10
+Sphaerophoria macrogaster,Insect_p,pollination,Persicaria hydropiper,Plant,pollination,3
+Sphaerophoria macrogaster,Insect_p,pollination,Vicia sativa subsp. nigra,Plant,pollination,2
+Sphaerophoria macrogaster,Insect_p,pollination,Trifolium dubium,Plant,pollination,1
+Sphaerophoria macrogaster,Insect_p,pollination,Conyza canadensis,Plant,pollination,4
+Sphaerophoria macrogaster,Insect_p,pollination,Conyza sumatrensis,Plant,pollination,25
+Sphaerophoria macrogaster,Insect_p,pollination,Gnaphalium japonicum,Plant,pollination,2
+Sphaerophoria macrogaster,Insect_p,pollination,Pennisetum alopecuroides,Plant,pollination,3
+Sphaerophoria macrogaster,Insect_p,pollination,Hydrocotyle ramiflora,Plant,pollination,1
+Sphaerophoria macrogaster,Insect_p,pollination,Oenanthe javanica,Plant,pollination,2
+Hydrocotyle sibthorpioides,Plant,pollination,Episyrphus balteatus,Insect_p,pollination,2
+Hemerocallis fulva var. kwanso,Plant,herbivory,Aulacophora indica,Insect_h,herbivory,2
+Aulacophora indica,Insect_h,herbivory,Hemerocallis fulva var. kwanso,Plant,herbivory,2
+Viola verecunda,Plant,herbivory,Leptocorisa chinensis,Insect_h,herbivory,3
+Leptocorisa chinensis,Insect_h,herbivory,Viola verecunda,Plant,herbivory,3
+Cynodon dactylon,Plant,herbivory,Oxya yezoensis,Insect_h,herbivory,1
+Oxya yezoensis,Insect_h,herbivory,Cynodon dactylon,Plant,herbivory,1
+Riptortus pedestris,Insect_h,herbivory,Commelina communis,Plant,herbivory,1
+Vicia sativa subsp. nigra,Plant,pollination,Eurema mandarina,Insect_p,pollination,12
+Vicia sativa subsp. nigra,Plant,pollination,Sphaerophoria macrogaster,Insect_p,pollination,2
+Trifolium dubium,Plant,pollination,Eurema mandarina,Insect_p,pollination,1
+Trifolium dubium,Plant,pollination,Sphaerophoria macrogaster,Insect_p,pollination,1
+Conyza canadensis,Plant,pollination,Eurema mandarina,Insect_p,pollination,2
+Conyza canadensis,Plant,pollination,Sphaerophoria macrogaster,Insect_p,pollination,4
+Conyza canadensis,Plant,pollination,Gymnosoma rotundata,Insect_p,pollination,1
+Gymnosoma rotundata,Insect_p,pollination,Conyza canadensis,Plant,pollination,1
+Cerastium fontanum subsp. vulgare var. angustifolium,Plant,herbivory,Formicidae sp.,Insect_h,herbivory,1
+Cerastium fontanum subsp. vulgare var. angustifolium,Plant,herbivory,Popillia japonica,Insect_h,herbivory,1
+Mimela splendens,Insect_h,herbivory,Amphicarpaea bracteata subsp. edgeworthii var. japonica,Plant,herbivory,4
+Mimela splendens,Insect_h,herbivory,Conyza sumatrensis,Plant,herbivory,2
+Mimela splendens,Insect_h,herbivory,Elymus tsukushiensis var. transiens,Plant,herbivory,1
+Eumolpinae sp.,Insect_h,herbivory,Glechoma hederacea subsp. grandis,Plant,herbivory,1
+Uroleucon nigrotuberculatum,Insect_h,herbivory,Leucanthemum Mill.,Plant,herbivory,2
+Uroleucon nigrotuberculatum,Insect_h,herbivory,Artemisia indica var. maximowiczii,Plant,herbivory,2
+Lixus depressipennis,Insect_h,herbivory,Amphicarpaea bracteata subsp. edgeworthii var. japonica,Plant,herbivory,1
+Arctiidae sp.,Insect_h,herbivory,Amphicarpaea bracteata subsp. edgeworthii var. japonica,Plant,herbivory,1
+Popillia japonica,Insect_h,herbivory,Cerastium fontanum subsp. vulgare var. angustifolium,Plant,herbivory,1
+Popillia japonica,Insect_h,herbivory,Sedum bulbiferum,Plant,herbivory,1
+Popillia japonica,Insect_h,herbivory,Potentilla anemonifolia,Plant,herbivory,1
+Popillia japonica,Insect_h,herbivory,Veronica peregrina,Plant,herbivory,1
+Sedum bulbiferum,Plant,herbivory,Popillia japonica,Insect_h,herbivory,1
+Potentilla anemonifolia,Plant,herbivory,Popillia japonica,Insect_h,herbivory,1
+Conyza sumatrensis,Plant,pollination,Sarcophagidae sp.,Insect_p,pollination,1
+Conyza sumatrensis,Plant,pollination,Diptera sp.,Insect_p,pollination,3
+Conyza sumatrensis,Plant,pollination,Sphaerophoria macrogaster,Insect_p,pollination,25
+Conyza sumatrensis,Plant,pollination,Melanostoma orientale,Insect_p,pollination,2
+Conyza sumatrensis,Plant,pollination,Ceratina flavipes,Insect_p,pollination,1
+Conyza sumatrensis,Plant,pollination,Apoidea sp.,Insect_p,pollination,2
+Conyza sumatrensis,Plant,pollination,Lycaena phlaeas,Insect_p,pollination,6
+Conyza sumatrensis,Plant,pollination,Muscidae sp.,Insect_p,pollination,1
+Conyza sumatrensis,Plant,pollination,Halictidae sp.,Insect_p,pollination,1
+Conyza sumatrensis,Plant,pollination,Tachinidae sp.,Insect_p,pollination,5
+Sarcophagidae sp.,Insect_p,pollination,Conyza sumatrensis,Plant,pollination,1
+Diptera sp.,Insect_p,pollination,Conyza sumatrensis,Plant,pollination,3
+Diptera sp.,Insect_p,pollination,Gnaphalium japonicum,Plant,pollination,1
+Conyza sumatrensis,Plant,herbivory,Ampedus japonicus,Insect_h,herbivory,2
+Conyza sumatrensis,Plant,herbivory,Lygocoris lucorum,Insect_h,herbivory,2
+Conyza sumatrensis,Plant,herbivory,Gametis jucunda,Insect_h,herbivory,1
+Conyza sumatrensis,Plant,herbivory,Mimela splendens,Insect_h,herbivory,2
+Conyza sumatrensis,Plant,herbivory,Conocephalus chinensis,Insect_h,herbivory,1
+Conyza sumatrensis,Plant,herbivory,Nysius plebeius,Insect_h,herbivory,8
+Ampedus japonicus,Insect_h,herbivory,Conyza sumatrensis,Plant,herbivory,2
+Lactuca indica,Plant,herbivory,Aphidoidea sp.1,Insect_h,herbivory,2
+Lactuca indica,Plant,herbivory,Uroleucon picridis,Insect_h,herbivory,6
+Aphidoidea sp.1,Insect_h,herbivory,Lactuca indica,Plant,herbivory,2
+Aphidoidea sp.1,Insect_h,herbivory,Leucanthemum Mill.,Plant,herbivory,1
+Lygocoris lucorum,Insect_h,herbivory,Conyza sumatrensis,Plant,herbivory,2
+Gametis jucunda,Insect_h,herbivory,Conyza sumatrensis,Plant,herbivory,1
+Uroleucon picridis,Insect_h,herbivory,Lactuca indica,Plant,herbivory,6
+Arthraxon hispidus,Plant,herbivory,Eysarcoris ventralis,Insect_h,herbivory,1
+Arthraxon hispidus,Plant,herbivory,Psychidae sp.,Insect_h,herbivory,1
+Arthraxon hispidus,Plant,herbivory,Exomala orientalis,Insect_h,herbivory,1
+Arthraxon hispidus,Plant,herbivory,Atrachya menetriesi,Insect_h,herbivory,1
+Arthraxon hispidus,Plant,herbivory,Cletus schmidti,Insect_h,herbivory,2
+Eysarcoris ventralis,Insect_h,herbivory,Arthraxon hispidus,Plant,herbivory,1
+Eysarcoris ventralis,Insect_h,herbivory,Microstegium vimineum,Plant,herbivory,2
+Eysarcoris ventralis,Insect_h,herbivory,Gramineae sp.,Plant,herbivory,1
+Plantago asiatica,Plant,herbivory,Sphingidae sp.,Insect_h,herbivory,2
+Sphingidae sp.,Insect_h,herbivory,Plantago asiatica,Plant,herbivory,2
+Calystegia　japonica,Plant,herbivory,Lilioceris merdigera,Insect_h,herbivory,1
+Lilioceris merdigera,Insect_h,herbivory,Calystegia　japonica,Plant,herbivory,1
+Spiranthes sinensis var. amoena,Plant,herbivory,Chrysolina aurichalcea,Insect_h,herbivory,1
+Spiranthes sinensis var. amoena,Plant,herbivory,Basilepta fulvipes,Insect_h,herbivory,3
+Spiranthes sinensis var. amoena,Plant,herbivory,Conocephalus chinensis,Insect_h,herbivory,1
+Chrysolina aurichalcea,Insect_h,herbivory,Spiranthes sinensis var. amoena,Plant,herbivory,1
+Gnaphalium japonicum,Plant,pollination,Melanostoma orientale,Insect_p,pollination,2
+Gnaphalium japonicum,Plant,pollination,Diptera sp.,Insect_p,pollination,1
+Gnaphalium japonicum,Plant,pollination,Andrenidae sp.,Insect_p,pollination,7
+Gnaphalium japonicum,Plant,pollination,Sphaerophoria macrogaster,Insect_p,pollination,2
+Gnaphalium japonicum,Plant,pollination,Diptera sp.1,Insect_p,pollination,1
+Gnaphalium japonicum,Plant,pollination,Muscidae sp.,Insect_p,pollination,1
+Gnaphalium japonicum,Plant,pollination,Ceratina flavipes,Insect_p,pollination,6
+Gnaphalium japonicum,Plant,pollination,Halictidae sp.,Insect_p,pollination,9
+Gnaphalium japonicum,Plant,pollination,Apoidea sp.,Insect_p,pollination,1
+Gnaphalium japonicum,Plant,pollination,Pieris rapae,Insect_p,pollination,1
+Melanostoma orientale,Insect_p,pollination,Gnaphalium japonicum,Plant,pollination,2
+Melanostoma orientale,Insect_p,pollination,Conyza sumatrensis,Plant,pollination,2
+Andrenidae sp.,Insect_p,pollination,Gnaphalium japonicum,Plant,pollination,7
+Lysimachia japonica,Plant,herbivory,Basilepta fulvipes,Insect_h,herbivory,1
+Basilepta fulvipes,Insect_h,herbivory,Lysimachia japonica,Plant,herbivory,1
+Basilepta fulvipes,Insect_h,herbivory,Spiranthes sinensis var. amoena,Plant,herbivory,3
+Elymus tsukushiensis var. transiens,Plant,herbivory,Mimela splendens,Insect_h,herbivory,1
+Microstegium vimineum,Plant,herbivory,Eysarcoris ventralis,Insect_h,herbivory,2
+Gramineae sp.,Plant,herbivory,Eysarcoris ventralis,Insect_h,herbivory,1
+Artemisia indica var. maximowiczii,Plant,herbivory,Uroleucon nigrotuberculatum,Insect_h,herbivory,2
+Artemisia indica var. maximowiczii,Plant,herbivory,Lixus acutipennis,Insect_h,herbivory,1
+Lixus acutipennis,Insect_h,herbivory,Artemisia indica var. maximowiczii,Plant,herbivory,1
+Diptera sp.1,Insect_p,pollination,Gnaphalium japonicum,Plant,pollination,1
+Muscidae sp.,Insect_p,pollination,Gnaphalium japonicum,Plant,pollination,1
+Muscidae sp.,Insect_p,pollination,Conyza sumatrensis,Plant,pollination,1
+Ceratina flavipes,Insect_p,pollination,Gnaphalium japonicum,Plant,pollination,6
+Ceratina flavipes,Insect_p,pollination,Conyza sumatrensis,Plant,pollination,1
+Halictidae sp.,Insect_p,pollination,Gnaphalium japonicum,Plant,pollination,9
+Halictidae sp.,Insect_p,pollination,Conyza sumatrensis,Plant,pollination,1
+Apoidea sp.,Insect_p,pollination,Gnaphalium japonicum,Plant,pollination,1
+Apoidea sp.,Insect_p,pollination,Pennisetum alopecuroides,Plant,pollination,3
+Apoidea sp.,Insect_p,pollination,Conyza sumatrensis,Plant,pollination,2
+Pieris rapae,Insect_p,pollination,Gnaphalium japonicum,Plant,pollination,1
+Pieris rapae,Insect_p,pollination,Artemisia indica var. maximowiczii,Plant,pollination,6
+Pieris rapae,Insect_p,pollination,Oenanthe javanica,Plant,pollination,3
+Artemisia indica var. maximowiczii,Plant,pollination,Pieris rapae,Insect_p,pollination,6
+Persicaria hydropiper,Plant,herbivory,Lema diversa,Insect_h,herbivory,1
+Persicaria hydropiper,Plant,herbivory,Lema coronata,Insect_h,herbivory,1
+Lema diversa,Insect_h,herbivory,Persicaria hydropiper,Plant,herbivory,1
+Homoeocerus striicornis,Insect_h,herbivory,Amphicarpaea bracteata subsp. edgeworthii var. japonica,Plant,herbivory,1
+Heteroptera sp.,Insect_h,herbivory,Amphicarpaea bracteata subsp. edgeworthii var. japonica,Plant,herbivory,1
+Eugnathus distinctus,Insect_h,herbivory,Amphicarpaea bracteata subsp. edgeworthii var. japonica,Plant,herbivory,5
+Exomala orientalis,Insect_h,herbivory,Arthraxon hispidus,Plant,herbivory,1
+Pennisetum alopecuroides,Plant,herbivory,Rhopalus maculatus,Insect_h,herbivory,2
+Rhopalus maculatus,Insect_h,herbivory,Pennisetum alopecuroides,Plant,herbivory,2
+Conocephalus chinensis,Insect_h,herbivory,Spiranthes sinensis var. amoena,Plant,herbivory,1
+Conocephalus chinensis,Insect_h,herbivory,Acalypha australis,Plant,herbivory,1
+Conocephalus chinensis,Insect_h,herbivory,Conyza sumatrensis,Plant,herbivory,1
+Pennisetum alopecuroides,Plant,pollination,Apoidea sp.,Insect_p,pollination,3
+Pennisetum alopecuroides,Plant,pollination,Sphaerophoria macrogaster,Insect_p,pollination,3
+Lycaena phlaeas,Insect_p,pollination,Conyza sumatrensis,Plant,pollination,6
+Hydrocotyle ramiflora,Plant,pollination,Sphaerophoria macrogaster,Insect_p,pollination,1
+Oenanthe javanica,Plant,pollination,Sphaerophoria macrogaster,Insect_p,pollination,2
+Oenanthe javanica,Plant,pollination,Pieris rapae,Insect_p,pollination,3
+Acalypha australis,Plant,herbivory,Conocephalus chinensis,Insect_h,herbivory,1
+Atrachya menetriesi,Insect_h,herbivory,Arthraxon hispidus,Plant,herbivory,1
+Lema coronata,Insect_h,herbivory,Persicaria hydropiper,Plant,herbivory,1
+Cletus schmidti,Insect_h,herbivory,Arthraxon hispidus,Plant,herbivory,2
+Nysius plebeius,Insect_h,herbivory,Conyza sumatrensis,Plant,herbivory,8
+Tachinidae sp.,Insect_p,pollination,Conyza sumatrensis,Plant,pollination,5
+Eurema mandarina_herbivory,Insect_h,herbivory,Commelina communis,Plant,herbivory,1
