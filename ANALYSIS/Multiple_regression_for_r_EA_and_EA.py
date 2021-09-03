@@ -28,6 +28,99 @@ scaled_df_A = pd.DataFrame(scaled_df_A, columns=col_names)
 scaled_df_M=scaler.fit_transform(df_M[col_names])
 scaled_df_M = pd.DataFrame(scaled_df_M, columns=col_names)
 
+##### new code
+variables=['HD', 'rb_k' , 'cLSsim' , 'CinLHubs_20', 'new_cLS_PR']
+from itertools import combinations
+c1 = [['HD'], ['rb_k'] , ['cLSsim'] , ['CinLHubs_20'], ['new_cLS_PR']]
+c2 = [i for i in combinations(variables,2)]
+c3 = [i for i in combinations(variables,3)]
+c4 = [i for i in combinations(variables,4)]
+c5 = [i for i in combinations(variables,5)]
+
+my_combinations=[c1,c2,c3,c4,c5]
+min_AIC_rEA_AA=100
+min_AIC_rEA_M=100
+min_AIC_EA_AA=100
+min_AIC_EA_M=100
+
+#generate the different models
+for index in range(len(my_combinations)): #c1,c2...
+    print("combinations with %s elements" % index)
+    for element in my_combinations[index]:
+        if (len(element) <2 ): #if only one variable
+            var_desc=element[0]
+        else:
+            var_desc=element[0]
+            for var_index in range(1,len(element)):
+                var_desc = var_desc + " + " + element[var_index]
+
+        desc_rEA="r_EA ~ %s" % var_desc
+        desc_EA="Area_merged ~ %s" % var_desc
+
+        print(desc_rEA)
+        print(desc_EA)
+
+        lm1_AA = smf.ols(formula=desc_rEA, data=scaled_df_A).fit()
+        lm1_AA_AIC=lm1_AA.aic
+        lm1_M = smf.ols(formula=desc_rEA, data=scaled_df_M).fit()
+        lm1_M_AIC=lm1_M.aic
+
+        lm2_AA = smf.ols(formula=desc_EA, data=scaled_df_A).fit()
+        lm2_AA_AIC=lm2_AA.aic
+        lm2_M = smf.ols(formula=desc_EA, data=scaled_df_M).fit()
+        lm2_M_AIC=lm2_M.aic
+
+        #find smaller AIC
+        if (lm1_AA_AIC < min_AIC_rEA_AA):
+            min_AIC_rEA_AA = lm1_AA_AIC
+            var_rEA_AA= desc_rEA
+            best_lm1_AA=lm1_AA
+            print ("found new min %s rEA_AA: %s" % (min_AIC_rEA_AA,desc_rEA))
+        if (lm1_M_AIC < min_AIC_rEA_M):
+            min_AIC_rEA_M = lm1_M_AIC
+            var_rEA_M = desc_rEA
+            best_lm1_M=lm1_M
+            print("found new min rEA_M: %s" % desc_rEA)
+        if (lm2_AA_AIC < min_AIC_EA_AA):
+            min_AIC_EA_AA = lm2_AA_AIC
+            var_EA_AA= desc_EA
+            best_lm2_AA=lm2_AA
+            print("found new min EA_AA: %s" % desc_EA)
+        if (lm2_M_AIC < min_AIC_EA_M):
+            min_AIC_EA_M = lm2_M_AIC
+            var_EA_M = desc_EA
+            best_lm2_M=lm2_M
+            print("found new min EA_M: %s" % desc_EA)
+
+print("The minimum AIC are for:")
+print("r_EA_AA: %s // %s " % (min_AIC_rEA_AA,var_rEA_AA))
+print("r_EA_M: %s // %s " % (min_AIC_rEA_M,var_rEA_M))
+print("EA_AA: %s  // %s " % (min_AIC_EA_AA,var_EA_AA))
+print("EA_M: %s // %s" % (min_AIC_EA_M,var_EA_M))
+
+#Now print table
+stargazer = Stargazer([best_lm1_AA,best_lm1_M,best_lm2_AA,best_lm2_M])
+stargazer.add_line("AIC",[round(best_lm1_AA.aic,2),round(best_lm1_M.aic,2),round(best_lm2_AA.aic,2),round(best_lm2_M.aic,2)],LineLocation.FOOTER_TOP)
+stargazer.custom_columns(['AA(best)', 'MA \& MM(best)','AA(best)','MA \& MM(best)'], [1, 1, 1, 1])
+stargazer.significant_digits(2)
+stargazer.show_degrees_of_freedom(False)
+stargazer.show_model_numbers(False)
+label_dict={"cLSsim": '$C$',  "CinLHubs_20": '$H_{C}$', "new_cLS_PR":'$PR_{C}$', 'LS_HD':'$\sigma_{k}/<k>_{LS}$','HD':'$\sigma_{k}/<k>$',"rb_k": '$r_{b}$','HD':r'$\sigma_{k}/<k>$'}
+stargazer.covariate_order(['HD','rb_k','cLSsim','CinLHubs_20','new_cLS_PR'])
+stargazer.rename_covariates(label_dict)
+stargazer.show_precision=True
+stargazer.dependent_variable_name("$r_EA$  ;    $EA$")
+
+table_html=stargazer.render_html()
+imgkit.from_string(table_html, '../OUTPUT/Images/Regression_table_both.png')
+
+table_latex=stargazer.render_latex()
+table_filename="../OUTPUT/Images/Regression_table_both.tex"
+text_file = open(table_filename, "w")
+text_file.write(table_latex)
+text_file.close()
+##### end new code
+quit()
 #regression models:
 # first multi regression MODEL for the r_EA with five structural features
 #desc= 'r_EA ~ LS_HD + rb_k + cLSsim + CinLHubs_20 + new_cLS_PR'
