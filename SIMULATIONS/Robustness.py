@@ -152,13 +152,13 @@ def get_node_sequence(nodes_to_erase, linking_set_DF, ext_MODE):
 
     if (ext_MODE == "RND"):
         node_sequence = sample(nodes_to_erase, len(nodes_to_erase))
-    elif (ext_MODE.startswith("OD")):
+    else:
         cols_to_use=list(set(list(linking_set_DF)).intersection(set(positive_interactions).union(negative_interactions)))
         linking_set_DF.loc[:, "O.Degree"] = linking_set_DF[cols_to_use].sum(axis=1)
         node_sequence = []
-        if(ext_MODE == "OD"):
+        if(ext_MODE == "DD"):#decreasing degree
             raw_ranking = linking_set_DF.sort_values(by="O.Degree", ascending=False)["O.Degree"]
-        elif (ext_MODE =="ODinv") :
+        elif (ext_MODE =="ID") :#increasing degree
             raw_ranking = linking_set_DF.sort_values(by="O.Degree", ascending=True)["O.Degree"]
 
         ranking_values = raw_ranking.unique()
@@ -170,18 +170,7 @@ def get_node_sequence(nodes_to_erase, linking_set_DF, ext_MODE):
         node_sequence = list(itertools.chain.from_iterable(node_sequence))
         #print(raw_ranking[node_sequence])
 
-    elif (ext_MODE == "PR"):
-        node_sequence=[]
-        raw_ranking=linking_set_DF.sort_values(by="P.Ratio", ascending=False)["P.Ratio"]
-        ranking_values=raw_ranking.unique()
-        for value in ranking_values:
-            tie_nodes=list(raw_ranking[raw_ranking==value].index)
-            rnd_untie=sample(tie_nodes,len(tie_nodes))
-            node_sequence.append(rnd_untie)
-
-        node_sequence= list(itertools.chain.from_iterable(node_sequence))
-        #print(raw_ranking[node_sequence])
-
+    
     return node_sequence
 ########################################
 # functions to attack networks and measure robustness

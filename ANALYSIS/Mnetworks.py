@@ -139,7 +139,7 @@ def get_layer_of_node(node_name,Mnet,**kwargs):
             plants_in_layer=get_nodes_in_set(Mnet,set_name=node_set,aspect_names=[interaction])
             #print("plants in %s: %s " % (interaction,plants_in_layer))
             if (node_name in plants_in_layer):
-                #print("está aqui!!\n")
+                #print("estï¿½ aqui!!\n")
                 interactions.append(interaction)
 
 
@@ -839,7 +839,7 @@ dict_sp_set_name_from_interaction_M={"pollination":"Pollinator","herbivory":"Her
 dict_sp_set_name_from_interaction_A={'parasitism':"Parasitoid",'herbivory':"Plant",'dispersion':"Seed disperser"}
 dict_sp_set_name_from_interaction={"MA": dict_sp_set_name_from_interaction_M,"MM": dict_sp_set_name_from_interaction_M, "AA":dict_sp_set_name_from_interaction_A}
 
-cite_dict={"Melian":"\\cite{Melian2009}", "Sinohara": "\cite{Shinohara2019}", "Pocock": "\cite{Pocock2012}","Hackett": "\cite{Hackett2019}", "McFayden":"\cite{Macfadyen2009}", "Dattilo": "\cite{Dattilo2016}"}
+cite_dict={"Melian":'\\cite{Melian2009}', "Sinohara": '\cite{Shinohara2019}', "Pocock": '\cite{Pocock2012}',"Hackett": '\cite{Hackett2019}', "McFayden":"\cite{Macfadyen2009}", "Dattilo": "\cite{Dattilo2016}"}
 
 #invert dictionary function
 def invert_dict(my_dict):

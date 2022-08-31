@@ -4,11 +4,14 @@ from Robustness import *
 import sys
 network_names=['Sinohara_1_ALL_PH', 'Sinohara_2_ALL_PH', 'Sinohara_3_ALL_PH', 'Sinohara_4_ALL_PH', 'Sinohara_ALL_A_PH', 'Sinohara_ALL_E_PH', 'Sinohara_ALL_I_PH', 'Sinohara_2_E_PH', 'Sinohara_3_E_PH', 'Sinohara_4_I_PH', 'Melian_OO_OO_PH', 'Hackett_1_ALL_PH', 'Hackett_2_ALL_PH', 'Hackett_1_S_PH', 'Hackett_1_GL_PH', 'Pocock_OO_OO_PH',  'Melian_OO_OO_HSD',  'McFayden_ALL_A_HPa', 'McFayden_1_A_HPa', 'McFayden_2_A_HPa', 'McFayden_3_A_HPa', 'McFayden_4_A_HPa', 'McFayden_5_A_HPa', 'McFayden_6_A_HPa', 'McFayden_7_A_HPa', 'McFayden_8_A_HPa', 'McFayden_9_A_HPa', 'McFayden_10_A_HPa', 'McFayden_ALL_B_HPa', 'McFayden_1_B_HPa', 'McFayden_2_B_HPa', 'McFayden_3_B_HPa', 'McFayden_4_B_HPa', 'McFayden_5_B_HPa', 'McFayden_6_B_HPa', 'McFayden_7_B_HPa', 'McFayden_8_B_HPa', 'McFayden_9_B_HPa', 'McFayden_10_B_HPa', 'Hackett_1_ALL_HPa', 'Hackett_1_WL_HPa',   'Melian_OO_OO_PSD','Dattilo_OO_OO_PSD','Dattilo_OO_OO_PA']
 
+network_names=['Sinohara_2_E_PH']
+
 Nrep=3000 #number of random sequences of specie to delete
-ext_MODE="OD" #RND, OD, ODinv, PR
-ext_MODE=sys.argv[1]
+ 
+ext_MODE=sys.argv[1] #RND, DD, ID: Random, decreasing degree, increasing degree
 
 for name in network_names:
+    print(name)
     #read network, get linking set and the nodes we are going to erase
     Mnet = Read_net_general(name)
     linking_set=get_linking_set(Mnet)
@@ -21,7 +24,7 @@ for name in network_names:
     Ext_struct = create_ext_struct(Mnet)
 
     for rep in range (Nrep):
-        #print("try %s\n" % rep )
+        print("rep %s" % rep, end='\r' )
         # get sequence of extinction depending on the extinction scenario
         node_sequence=get_node_sequence(nodes_to_erase,K_df.loc[nodes_to_erase],ext_MODE)
         #print("calc ext area of seq")
@@ -30,12 +33,14 @@ for name in network_names:
         #add this particular EA to the dataframe of extinction areas
         Area_df=Add_ext_area_to_Area_df(Area_df,ext_area,rep)
         #and to the node impact df: for obtaining later the importance of plants for the different interaction layers/whole community
-        Node_impact_df=Add_node_seq_to_node_impact_df(Node_impact_df,node_sequence,ext_area,rep)
+        if (ext_MODE == "RND"):
+            Node_impact_df=Add_node_seq_to_node_impact_df(Node_impact_df,node_sequence,ext_area,rep)
 
     # export the extinction area dataframe
-    filename = "../OUTPUT/Data/Ext_Area_%s_%s_test.csv" % (name, ext_MODE)
+    filename = "../OUTPUT/Data/Ext_Area_%s_%s.csv" % (name, ext_MODE)
     Area_df.to_csv(filename)
     # export the node impact dataframe
-    filename2 = "../OUTPUT/Data/Node_impact_%s_%s_test.csv" % (name, ext_MODE)
-    Node_impact_df.to_csv(filename2)
+    if (ext_MODE == "RND"):
+        filename2 = "../OUTPUT/Data/Ext_Areas/Node_impact_%s_%s.csv" % (name, ext_MODE)
+        Node_impact_df.to_csv(filename2)
 

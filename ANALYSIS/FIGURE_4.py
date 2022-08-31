@@ -22,23 +22,33 @@ N=len(plants)
 #get impact of each plant
 filename="../OUTPUT/Data/Ext_Areas/Node_impact_%s_%s.csv" % (name,ext_MODE)
 Node_impact_df = pd.read_csv(filename, index_col=0)
-#measure coefficient od determination to build ranking
-Node_corr_df = Node_impact_df.corr(method="spearman")#only ranking, not searching for lineal dependency
+Node_impact_df["Robust_merged"]=1-Node_impact_df["Area_merged"]
+
 #Build rankings dataframe
 rankings_names=["Area_merged","Area_%s" % interactions[0], "Area_%s" %interactions[1],"Area_only_%s" %interactions[0],"Area_only_%s" % interactions[1]]
+rankings_names_rev=["Robust_merged","Robust_%s" % interactions[0], "Robust_%s" %interactions[1],"Robust_only_%s" %interactions[0],"Robust_only_%s" % interactions[1]]
+for each_interaction in interactions:
+    Node_impact_df["Robust_%s" % each_interaction]=1-Node_impact_df["Area_%s" % each_interaction]
+    Node_impact_df["Robust_only_%s" % each_interaction]=1-Node_impact_df["Area_only_%s" % each_interaction]
+
 ranking={}
-for rname in rankings_names:
+#measure coefficient od determination to build ranking
+Node_corr_df = Node_impact_df.corr(method="spearman")#only ranking, not searching for lineal dependency
+
+for rname in rankings_names_rev:
     ranking[rname]=Node_corr_df[rname][:N].rank(ascending=False)
     ranking[rname].name=rname
     ranking[rname].to_frame().reset_index()
 list_of_rankings=list(ranking.values())
 all_ranks=pd.concat(list_of_rankings,axis=1)
-all_ranks=all_ranks.sort_values("Area_merged", ascending=False)
+#all_ranks=all_ranks.sort_values("Area_merged", ascending=False)
+all_ranks=all_ranks.sort_values("Robust_merged", ascending=False)
 #choose columns names to compare the different rankings
-columns=["Area_%s" %interactions[0],"Area_merged","Area_%s" %interactions[1]]
+#columns=["Area_%s" %interactions[0],"Area_merged","Area_%s" %interactions[1]]
+columns=["Robust_%s" %interactions[0],"Robust_merged","Robust_%s" %interactions[1]]
 
 #FIGURE:
-rename_dict={"Area_herbivory":"Herbivory", "Area_pollination":"Pollination","Area_merged":"Whole community\n(tri-partite network)"}
+rename_dict={"Area_herbivory":"Herbivore", "Area_pollination":"Pollination","Area_merged":"Whole community\n(tri-partite network)","Robust_herbivory":"Herbivore\nranking", "Robust_pollination":"Pollinator\nranking","Robust_merged":"Whole community ranking\n(tri-partite network)"}
 fig = plt.figure(figsize=(13,6))
 gs = fig.add_gridspec(3, 8) #y,x
 plt.subplots_adjust(hspace=0.0)
@@ -52,14 +62,15 @@ species_list=list(df_T)
 for sp in species_list:
     x=list(df_T.index)
     y=df_T[sp]
-    addlabels(x,y,[N+1 - df_T[sp]["Area_merged"]]*len(x),fontsize=6.8,fontweight='black')
+    #addlabels(x,y,[N+1 - df_T[sp]["Area_merged"]]*len(x),fontsize=6.8,fontweight='black')
+    addlabels(x,y,[N+1 - df_T[sp]["Robust_merged"]]*len(x),fontsize=6.8,fontweight='black')
 ax1.yaxis.set_visible(False)
 ax1.tick_params(axis=u'both', which=u'both',length=0)
 ax1.text(-0.02, 1, "G", transform=ax1.transAxes, size=12, weight='bold')
 
 ax1.set_title("Plant Ranking")
 #correlations # columns= herbivory, merged, pollination
-rename_dict_2={"Area_herbivory":r'$EA_{H}$', "Area_pollination":r'$EA_{P}$',"Area_merged":r'$EA_{M}$'}
+rename_dict_2={"Area_herbivory":r'$EA_{H}$', "Area_pollination":r'$EA_{P}$',"Area_merged":r'$EA_{M}$',"Robust_herbivory":r'$R_{Herb.}$',"Robust_pollination":r'$R_{Pol.}$',"Robust_merged":r'$R$'}
 plants_to_plot=["Persicaria hydropiper","Lactuca indica","Cerastium fontanum subsp. vulgare var. angustifolium","Pennisetum alopecuroides"]
 ###################################################
 ax2 = fig.add_subplot(gs[0, 0])
@@ -80,7 +91,8 @@ for layer in range(3): #herb, merged, Poll
     axs[layer].xaxis.set_visible(False)
     axs[layer].text(0.01, 0.9, index[layer], transform=axs[layer].transAxes, size=14, weight='bold')
 ax4.xaxis.set_visible(True)
-ax4.set_xlabel("Ext. order", fontsize=14)
+#ax4.set_xlabel("Ext. order", fontsize=14)
+ax4.set_xlabel("Position", fontsize=14)
 
 ax2.set_title("Plant 1")
 ##################################################
@@ -101,7 +113,8 @@ for layer in range(3): #herb, merged, Poll
     axs[layer].yaxis.set_visible(False)
     axs[layer].text(0.01, 0.9, index[layer], transform=axs[layer].transAxes, size=12, weight='bold')
 ax7.xaxis.set_visible(True)
-ax7.set_xlabel("Ext. order", fontsize=14)
+#ax7.set_xlabel("Ext. order", fontsize=14)
+ax7.set_xlabel("Position", fontsize=14)
 ax5.set_title("Plant 2")
 ##################################################
 #Rigth panel:
@@ -149,6 +162,7 @@ ax8.legend(loc='upper right')
 ax8.text(0.01, 0.96, "H", transform=ax8.transAxes, size=12, weight='bold')
 ax8.set_xlabel("")
 ax8.set_ylabel("Count", fontsize=14)
+ax8.set_title("Ranking classification", fontsize=14)
 
 filename="../OUTPUT/Images/FIGURE_4.pdf"
 plt.tight_layout(pad=0.3)

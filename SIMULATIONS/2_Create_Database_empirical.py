@@ -1,6 +1,6 @@
 from Mnetworks import *
 from Metrics import *
-pd.options.mode.chained_assignment = None  # default='warn'
+import sys
 
 network_names=['Sinohara_1_ALL_PH', 'Sinohara_2_ALL_PH', 'Sinohara_3_ALL_PH', 'Sinohara_4_ALL_PH', 'Sinohara_ALL_A_PH', 'Sinohara_ALL_E_PH', 'Sinohara_ALL_I_PH', 'Sinohara_2_E_PH', 'Sinohara_3_E_PH', 'Sinohara_4_I_PH', 'Melian_OO_OO_PH', 'Hackett_1_ALL_PH', 'Hackett_2_ALL_PH', 'Hackett_1_S_PH', 'Hackett_1_GL_PH', 'Pocock_OO_OO_PH',  'Melian_OO_OO_HSD',  'McFayden_ALL_A_HPa', 'McFayden_1_A_HPa', 'McFayden_2_A_HPa', 'McFayden_3_A_HPa', 'McFayden_4_A_HPa', 'McFayden_5_A_HPa', 'McFayden_6_A_HPa', 'McFayden_7_A_HPa', 'McFayden_8_A_HPa', 'McFayden_9_A_HPa', 'McFayden_10_A_HPa', 'McFayden_ALL_B_HPa', 'McFayden_1_B_HPa', 'McFayden_2_B_HPa', 'McFayden_3_B_HPa', 'McFayden_4_B_HPa', 'McFayden_5_B_HPa', 'McFayden_6_B_HPa', 'McFayden_7_B_HPa', 'McFayden_8_B_HPa', 'McFayden_9_B_HPa', 'McFayden_10_B_HPa', 'Hackett_1_ALL_HPa', 'Hackett_1_WL_HPa',   'Melian_OO_OO_PSD', 'Dattilo_OO_OO_PSD','Dattilo_OO_OO_PA']
 
@@ -11,7 +11,7 @@ for name in network_names:
 my_index = pd.MultiIndex.from_tuples(network_name_type_tuples,names=['sign','int','name'])
 
 #define the extinction scenario we want to study
-ext_MODE="RND" #OD, ODinv, RND  DD, ID
+ext_MODE=sys.argv[1] #RND, DD, ID
 
 #determine the structural metrics we want to include in the database
 measures=["name_set_a","name_set_b","linking_set","name_layer_A","name_layer_B","Na","Nb","Nls","N_lsA","N_lsB","N_A","N_B","K_A","K_B","C_A","C_B", "HD","LS_HD","nonLS_HD", "P_HD", "nonP_HD","lsA_HD","lsB_HD" ,"rb_k", "r_k","cLSsim","CinLHubs_10","CinLHubs_20","CinLHubs_5","new_cLS_PR","PRofCinLhubs", "Area_merged", "Area_merged_std","EA_a","EA_b","EA_lA","EA_lB","r_EA"]
@@ -98,8 +98,8 @@ for sign, int, name in network_name_type_tuples:
 
 
     #fill degree heterogeneities and degree-degree correlations
-    print([HD, LS_HD,nonLS_HD,P_HD,nonP_HD,ls_A_HD,ls_B_HD,rb])
-    print(data.loc[(sign, int, name),["HD","LS_HD","nonLS_HD", "P_HD", "nonP_HD","lsA_HD","lsB_HD", "rb_k","r_k"]])
+    #print([HD, LS_HD,nonLS_HD,P_HD,nonP_HD,ls_A_HD,ls_B_HD,rb])
+    #print(data.loc[(sign, int, name),["HD","LS_HD","nonLS_HD", "P_HD", "nonP_HD","lsA_HD","lsB_HD", "rb_k","r_k"]])
     data.loc[(sign, int, name),["HD","LS_HD","nonLS_HD", "P_HD", "nonP_HD","lsA_HD","lsB_HD", "rb_k","r_k"]]= [HD, LS_HD,nonLS_HD,P_HD,nonP_HD,ls_A_HD,ls_B_HD,rb,r]
 
     # Linking set metrics ###################################################################
@@ -115,7 +115,7 @@ for sign, int, name in network_name_type_tuples:
 
     # Extinction areas
     # #"EA", "EA_a","EA_b","EA_lA","EA_lB","r_EA"]#####################################################################
-    EA_filename= "../OUTPUT/Data/Ext_Areas/Ext_Area_%s_%s.csv" % (name, ext_MODE)
+    EA_filename= "../OUTPUT/Data/Ext_Area_%s_%s.csv" % (name, ext_MODE)
     EA_df=pd.read_csv(EA_filename,index_col=0)
     if (sign == "AA"):#correct column Area parasitism
         try:
@@ -135,8 +135,8 @@ for sign, int, name in network_name_type_tuples:
     data.loc[(sign, int, name), "r_EA"] = EA_df.corr(method="spearman").loc[
         "Area_%s" % name_layer_A, "Area_%s" % name_layer_B]
 
-print(data)
+#print(data)
 df_filename="../OUTPUT/Data/Networks_df_%s.csv" % ext_MODE
-print(df_filename)
+#print(df_filename)
 data.reset_index(inplace=True)
 data.to_csv(df_filename)

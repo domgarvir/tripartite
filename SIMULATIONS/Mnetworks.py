@@ -1,10 +1,14 @@
 # -*-coding:Latin-1 -*
+import warnings
+warnings.simplefilter(action='ignore', category=FutureWarning)
 import pandas as pd
+pd.options.mode.chained_assignment = None  # default='warn'
 import numpy as np
 import itertools
 from pymnet import *
 from random import seed, randint, shuffle, sample
 from math import ceil
+
 #READING - WRITING MNETWORKS
 def Read_net_general(net_name):
     #print(net_name)
@@ -139,7 +143,7 @@ def get_layer_of_node(node_name,Mnet,**kwargs):
             plants_in_layer=get_nodes_in_set(Mnet,set_name=node_set,aspect_names=[interaction])
             #print("plants in %s: %s " % (interaction,plants_in_layer))
             if (node_name in plants_in_layer):
-                #print("está aqui!!\n")
+                #print("estï¿½ aqui!!\n")
                 interactions.append(interaction)
 
 
