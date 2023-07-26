@@ -408,7 +408,7 @@ def get_ranking_df():
         interactions = list(Mnet.slices[2])
         K_df, linking_set, trash = get_K_df(Mnet, linking_set=linking_set)
 
-        filename =  "../OUTPUT/Data/Ext_Areas/Node_impact_%s_%s.csv" % (name, "RND")
+        filename =  "../../OUTPUT/Data/Node_impact_%s_%s.csv" % (name, "RND")
         Node_impact_df = pd.read_csv(filename, index_col=0)
         # print(Node_impact_df.mean()[["Area_%s" % interactions[0],"Area_%s" % interactions[1]]])
         if (my_sign == "AA"):  # correct the error in Area parsitism

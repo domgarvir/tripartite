@@ -6,9 +6,17 @@ network_names=['Sinohara_1_ALL_PH', 'Sinohara_2_ALL_PH', 'Sinohara_3_ALL_PH', 'S
 
 network_names=['Sinohara_2_E_PH']
 
-Nrep=3000 #number of random sequences of specie to delete
+Nrep=3 #number of random sequences of specie to delete
  
-ext_MODE=sys.argv[1] #RND, DD, ID: Random, decreasing degree, increasing degree
+try: 
+    ext_MODE=sys.argv[1] #Extinction scenarios: RND, DD, ID: Random, decreasing degree, increasing degree
+except: 
+    ext_MODE="RND" #Co-extinction algorithm "classic" = the classic Dune approach, "stochastic"=Vieira 2014 Eco Lett. sothcastic approach with  Ri=1, bottom up control (plants do nor go extinct because of lack of animal partners This last is only implemented for mutualistic-antagonistic networks
+
+try:
+    algorithm=sys.argv[2]
+except:    
+    algorithm="classic"
 
 for name in network_names:
     print(name)
@@ -28,7 +36,9 @@ for name in network_names:
         # get sequence of extinction depending on the extinction scenario
         node_sequence=get_node_sequence(nodes_to_erase,K_df.loc[nodes_to_erase],ext_MODE)
         #print("calc ext area of seq")
-        ext_area, ext_curve =calc_ext_area_of_seq(Mnet, node_sequence, "Plant", name,ext_MODE, rep,Area_struct=Area_struct,ext_curve=True)
+        #Measure extinction area: 
+        
+        ext_area, ext_curve =calc_ext_area_of_seq(Mnet, node_sequence, "Plant", name,ext_MODE, rep,Area_struct=Area_struct, mode=algorithm,ext_curve=True)
         #plot_ext_area_sequence_multiplot(name, ext_MODE, rep)
         #add this particular EA to the dataframe of extinction areas
         Area_df=Add_ext_area_to_Area_df(Area_df,ext_area,rep)
@@ -37,10 +47,17 @@ for name in network_names:
             Node_impact_df=Add_node_seq_to_node_impact_df(Node_impact_df,node_sequence,ext_area,rep)
 
     # export the extinction area dataframe
-    filename = "../OUTPUT/Data/Ext_Area_%s_%s.csv" % (name, ext_MODE)
+    if (algorithm == "classic"):
+        filename = "../OUTPUT/Data/Ext_Area_%s_%s.csv" % (name, ext_MODE)
+    elif (algorithm == "stochastic"): 
+        filename = "../OUTPUT/Data/Ext_Area_%s_%sW.csv" % (name, ext_MODE) 
     Area_df.to_csv(filename)
+    
     # export the node impact dataframe
     if (ext_MODE == "RND"):
-        filename2 = "../OUTPUT/Data/Ext_Areas/Node_impact_%s_%s.csv" % (name, ext_MODE)
+        if (algorithm == "classic"):
+            filename2 = "../OUTPUT/Data/Ext_Areas/Node_impact_%s_%s.csv" % (name, ext_MODE)
+        elif (algorithm == "stochastic"):
+            filename2 = "../OUTPUT/Data/Ext_Areas/Node_impact_%s_%sW.csv" % (name, ext_MODE)   
         Node_impact_df.to_csv(filename2)
 

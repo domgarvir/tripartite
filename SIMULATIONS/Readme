@@ -5,6 +5,11 @@ The code in thsi folder reads the databases of tripartite networks and measure s
 File 1_measure_empirical_EA.py reads the networks from the Network_DB folder, and simulates the removal of 3000 secuences of plant species, measuring the Robustness (1- Extinction Area) to loss of plants in one of these node removal scanarios: (RND), (OD), (ODinv) (random removal, by decreasing degree, by increasing degree). The robustness and interdependence results are stored in ../OUTPUT/Data/Ext_Area_"NET-NAME"_"EXTINCTION-SCENARIO".csv and the data we use to determine the ranking of importance of plants, that is the order of the plant in the sequence and the total robustness, in ../OUTPUT/Data/Ext_Areas/Node_impact_"NET-NAME"_"EXTINCTION-SCENARIO".csv
 To execute the this code you need to specify one of the three extinction scenarios as an argument like this: 
 python 1_measure_empirical_EA.py RND
+if not, the RND will be chosen as default. 
+
+It is now possible to measure the robustness using a stochastic algorithm in mutualistic-antagonistic networks. To run that version :
+python 1_measure_empirical_EA.py RND stochastic
+The robustness and interdependence results are stored in ../OUTPUT/Data/Ext_Area_"NET-NAME"_"EXTINCTION-SCENARIO"W.csv and the data we use to determine the ranking of importance of plants, that is the order of the plant in the sequence and the total robustness, in ../OUTPUT/Data/Ext_Areas/Node_impact_"NET-NAME"_"EXTINCTION-SCENARIO"W.csv
 
 File 1_measure_randomized_EA.py reads the networks, and performs 100 randomizations following one of the 4 random models: (NL), (NL2), (K2),or (K), and for each of the randomized networks measures the robustness and interdependence to the removal of 1000 sequences of plants in on of the three extinction scenarios: RND, OD, ODinv (random removal, by decreasing degree, by increasing degree). Resulta (average and standard deviation of robustness and interdependence) are stored in ../OUTPUT/Ext_Area_"NET-NAME"_"EXTINCTION-SCENARIO"_"NULL-MODEL".csv
 To execute this code you need to provide both the null model and the extinction scenario as arguments like this:

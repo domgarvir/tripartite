@@ -94,7 +94,9 @@ filename="../OUTPUT/Images/Figure_S4A.pdf"
 plt.tight_layout()
 plt.savefig(filename)
 
-#comparing merged vs set degree heterogeneity
+
+
+#comparing merged vs set degree heterogeneity - Table S3
 emp_df_filename="../OUTPUT/Data/Networks_df_%s.csv" % "RND"
 emp_df=pd.read_csv(emp_df_filename, index_col=0)
 
@@ -104,7 +106,7 @@ gtb=emp_df["LS_HD"]>emp_df["lsB_HD"]
 A= emp_df[gta | gtb].index #at least LS_HD is greather than one of the layers
 B= emp_df[gta & gtb].index # LS_HD is greater in the merged than in any of the components
 
-columns=['name','name_layer_A','name_layer_B',"LS_HD","lsA_HD","lsB_HD"]
+columns=['name','name_layer_A','name_layer_B',"N_A","N_B","LS_HD","lsA_HD","lsB_HD"]
 het_df=emp_df[columns]
 het_df["Increaser LS HD"]=''
 het_df.loc[B,"Increaser LS HD"]='*'
@@ -113,4 +115,27 @@ table_latex=het_df.to_latex(float_format="%.2f")
 text_file = open(Table_filename, "w")
 text_file.write(table_latex)
 text_file.close()
+
+
+#comparing size of layers
+emp_df.loc[:,"DN"]=emp_df["N_A"]- emp_df["N_B"]
+emp_df.loc[:,"DN_r"]=(emp_df["N_A"] - emp_df["N_B"])/(emp_df["N_A"])
+
+sns.set_style("white")
+nrow=1
+ncol=2
+f, axarr = plt.subplots(nrow, ncol, figsize=(8*ncol,4*nrow),sharex=True)
+axarr = axarr.ravel()
+fontsize = 20
+b=plot_boxplot_fromdf_wseaborn_to_ax(emp_df,"DN",box_by= "INT",ax=axarr[0], index="A", ylabel= "DN",points=True)
+b.tick_params(labelsize=15)
+
+c=plot_boxplot_fromdf_wseaborn_to_ax(emp_df,"DN_r",box_by= "INT",ax=axarr[1], index="B", ylabel= "DN_r",points=True)
+c.tick_params(labelsize=15)
+
+filename="../OUTPUT/Images/Figure_R6.pdf"
+plt.tight_layout()
+plt.savefig(filename)
+
+
 quit()

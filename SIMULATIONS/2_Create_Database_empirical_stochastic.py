@@ -1,10 +1,19 @@
 from Mnetworks import *
 from Metrics import *
 import sys
-import warnings
-warnings.filterwarnings("ignore")
 
-network_names=['Sinohara_1_ALL_PH', 'Sinohara_2_ALL_PH', 'Sinohara_3_ALL_PH', 'Sinohara_4_ALL_PH', 'Sinohara_ALL_A_PH', 'Sinohara_ALL_E_PH', 'Sinohara_ALL_I_PH', 'Sinohara_2_E_PH', 'Sinohara_3_E_PH', 'Sinohara_4_I_PH', 'Melian_OO_OO_PH', 'Hackett_1_ALL_PH', 'Hackett_2_ALL_PH', 'Hackett_1_S_PH', 'Hackett_1_GL_PH', 'Pocock_OO_OO_PH',  'Melian_OO_OO_HSD',  'McFayden_ALL_A_HPa', 'McFayden_1_A_HPa', 'McFayden_2_A_HPa', 'McFayden_3_A_HPa', 'McFayden_4_A_HPa', 'McFayden_5_A_HPa', 'McFayden_6_A_HPa', 'McFayden_7_A_HPa', 'McFayden_8_A_HPa', 'McFayden_9_A_HPa', 'McFayden_10_A_HPa', 'McFayden_ALL_B_HPa', 'McFayden_1_B_HPa', 'McFayden_2_B_HPa', 'McFayden_3_B_HPa', 'McFayden_4_B_HPa', 'McFayden_5_B_HPa', 'McFayden_6_B_HPa', 'McFayden_7_B_HPa', 'McFayden_8_B_HPa', 'McFayden_9_B_HPa', 'McFayden_10_B_HPa', 'Hackett_1_ALL_HPa', 'Hackett_1_WL_HPa',   'Melian_OO_OO_PSD', 'Dattilo_OO_OO_PSD','Dattilo_OO_OO_PA']
+
+#1st decide the networks you want to study: in this case only MA 
+Mnet_sign_types=["MA"] #"MMM" , "MAA"
+# #
+network_names=[]
+for net_sign in Mnet_sign_types:
+     #print("net sign:%s" % net_sign)
+     for net_type in dict_sign_types_2_net_type[net_sign]:
+        #if(net_type == "MA" ):
+        #print("net type:%s\n" % net_type)
+        network_names.append(dict_type_2_names[net_type])
+network_names=network_names[0]
 
 network_name_type_tuples=[]
 for name in network_names:
@@ -13,10 +22,13 @@ for name in network_names:
 my_index = pd.MultiIndex.from_tuples(network_name_type_tuples,names=['sign','int','name'])
 
 #define the extinction scenario we want to study
-ext_MODE=sys.argv[1] #RND, DD, ID
+ext_MODE="RND" #, DD, ID
+
+pd.options.mode.chained_assignment = None  # default='warn'
 
 #determine the structural metrics we want to include in the database
-measures=["name_set_a","name_set_b","linking_set","name_layer_A","name_layer_B","Na","Nb","Nls","Ncon","N_lsA","N_lsB","N_A","N_B","K_A","K_B","C_A","C_B", "HD","LS_HD","nonLS_HD", "P_HD", "nonP_HD","lsA_HD","lsB_HD" ,"rb_k", "r_k","cLSsim","CinLHubs_10","CinLHubs_20","CinLHubs_5","new_cLS_PR","PRofCinLhubs", "Area_merged", "Area_merged_std","EA_a","EA_b","EA_lA","EA_lB","r_EA"]
+measures=["name_set_a","name_set_b","linking_set","name_layer_A","name_layer_B","Na","Nb","Nls","N_lsA","N_lsB","N_A","N_B","K_A","K_B","C_A","C_B", "HD","LS_HD","nonLS_HD", "P_HD", "nonP_HD","lsA_HD","lsB_HD" ,"rb_k", "r_k","cLSsim","CinLHubs_10","CinLHubs_20","CinLHubs_5","new_cLS_PR","PRofCinLhubs", "Area_merged", "Area_merged_std","EA_a","EA_b","EA_lA","EA_lB","r_EA","AreaW_merged","AreaW_merged_std","EAW_a","EAW_b","EAW_lA","EAW_lB","r_EAW"]
+
 
 data=pd.DataFrame(index=my_index, columns=measures)
 
@@ -62,7 +74,6 @@ for sign, int, name in network_name_type_tuples:
     nodes_lsB=get_nodes_in_spset(Mnet,sign,species_set=linking_set,interaction_layer=name_layer_B)
     N_lsB=len(nodes_lsB)
     Nls=len(set(get_nodes_in_spset(Mnet,sign,species_set=linking_set)))
-    Ncon= len(get_nodes_in_spset(Mnet,sign,species_set=linking_set)) - Nls
 
     species_set_a=dict_sp_set_name_from_interaction[sign][name_layer_A]
     species_set_b=dict_sp_set_name_from_interaction[sign][name_layer_B]
@@ -76,12 +87,10 @@ for sign, int, name in network_name_type_tuples:
     # fill basic structural measure
     # "EA", "EA_a","EA_b","EA_lA","EA_lB","r_EA"
     # by layer
-    data.loc[(sign, int, name), ["name_set_a", "name_set_b", "linking_set", "name_layer_A", "name_layer_B"]] = \
-        [species_set_a, species_set_b, linking_set, name_layer_A, name_layer_B]
-    data.loc[(sign, int, name), ["N_A", "N_B", "K_A", "K_B", "C_A", "C_B", "N_lsA", "N_lsB"]] = \
-        [N_A, N_B, K_A, K_B, C_A, C_B, N_lsA, N_lsB]
+    data.loc[(sign, int, name), ["name_set_a", "name_set_b", "linking_set", "name_layer_A", "name_layer_B"]] = [species_set_a, species_set_b, linking_set, name_layer_A, name_layer_B]
+    data.loc[(sign, int, name), ["N_A", "N_B", "K_A", "K_B", "C_A", "C_B", "N_lsA", "N_lsB"]] = [N_A, N_B, K_A, K_B, C_A, C_B, N_lsA, N_lsB]
     #by set
-    data.loc[(sign, int, name),["Na","Nb","Nls","Ncon"]]=[Na, Nb, Nls,Ncon]
+    data.loc[(sign, int, name),["Na","Nb","Nls"]]=[Na, Nb, Nls]
 
     # Degree distribution related stuff ######################################################
     #Degree heterogeneities
@@ -103,7 +112,7 @@ for sign, int, name in network_name_type_tuples:
     #fill degree heterogeneities and degree-degree correlations
     #print([HD, LS_HD,nonLS_HD,P_HD,nonP_HD,ls_A_HD,ls_B_HD,rb])
     #print(data.loc[(sign, int, name),["HD","LS_HD","nonLS_HD", "P_HD", "nonP_HD","lsA_HD","lsB_HD", "rb_k","r_k"]])
-    data.loc[(sign, int, name),["HD","LS_HD","nonLS_HD", "P_HD", "nonP_HD","lsA_HD","lsB_HD", "rb_k","r_k"]]= [HD, LS_HD,nonLS_HD,P_HD,nonP_HD,ls_A_HD,ls_B_HD,rb,r]
+    data.loc[(sign, int, name),["HD","LS_HD","nonLS_HD", "P_HD", "nonP_HD","lsA_HD","lsB_HD", "rb_k","r_k"]]=[HD, LS_HD,nonLS_HD,P_HD,nonP_HD,ls_A_HD,ls_B_HD,rb,r]
 
     # Linking set metrics ###################################################################
     C=calc_measure(Mnet,old_linking_set,LS_df,"cLSsim",K_df=K_df)
@@ -118,7 +127,7 @@ for sign, int, name in network_name_type_tuples:
 
     # Extinction areas
     # #"EA", "EA_a","EA_b","EA_lA","EA_lB","r_EA"]#####################################################################
-    #EA_filename= "../OUTPUT/Data/Ext_Area_%s_%s.csv" % (name, ext_MODE)
+    #EA_filename= "./OUTPUT/Data/Ext_Area_%s_%s.csv" % (name, ext_MODE)
     EA_filename= "../../OUTPUT/Data/Ext_Area_%s_%s.csv" % (name, ext_MODE)
     
     EA_df=pd.read_csv(EA_filename,index_col=0)
@@ -137,11 +146,29 @@ for sign, int, name in network_name_type_tuples:
     data.loc[(sign, int, name), "EA_lA"] = mean_EA["Area_only_%s" % name_layer_A]
     data.loc[(sign, int, name), "EA_lB"] = mean_EA["Area_only_%s" % name_layer_B]
 
-    data.loc[(sign, int, name), "r_EA"] = EA_df.corr(method="spearman").loc[
-        "Area_%s" % name_layer_A, "Area_%s" % name_layer_B]
+    data.loc[(sign, int, name), "r_EA"] = EA_df.corr(method="spearman").loc["Area_%s" % name_layer_A, "Area_%s" % name_layer_B]
+
+    #weighted extinction areas
+    #EAW_filename= "./OUTPUT/Data/Ext_Area_%s_%s_W.csv" % (name, ext_MODE)
+    EAW_filename= "../../OUTPUT/Data/Ext_Area_%s_%s_W.csv" % (name, ext_MODE)
+    EAW_df=pd.read_csv(EAW_filename,index_col=0)
+    mean_EAW=EAW_df.mean()
+    std_EAW = EAW_df.std()
+
+    data.loc[(sign, int, name),"AreaW_merged"]=mean_EAW["Area_merged"]
+    data.loc[(sign, int, name), "AreaW_merged_std"] = std_EAW["Area_merged"]
+    data.loc[(sign, int, name),"EAW_a"]=mean_EAW["Area_%s" % name_layer_A]
+    data.loc[(sign, int, name), "EAW_b"] = mean_EAW["Area_%s" % name_layer_B]
+    data.loc[(sign, int, name), "EAW_lA"] = mean_EAW["Area_only_%s" % name_layer_A]
+    data.loc[(sign, int, name), "EAW_lB"] = mean_EAW["Area_only_%s" % name_layer_B]
+
+    data.loc[(sign, int, name), "r_EAW"] = EAW_df.corr(method="spearman").loc["Area_%s" % name_layer_A, "Area_%s" % name_layer_B]
+
 
 #print(data)
-df_filename="../OUTPUT/Data/Networks_df_%s_new.csv" % ext_MODE
+df_filename="../OUTPUT/Data/Networks_df_%s_W.csv" % ext_MODE
 #print(df_filename)
 data.reset_index(inplace=True)
 data.to_csv(df_filename)
+
+df=pd.read_csv(df_filename, index_col=0)

@@ -368,6 +368,183 @@ def calc_ext_area_of_seq(Mnet,nodes_to_erase,active_set,net_name,ranking,nrep,**
 
 
     try:
+        mode=kwargs["mode"] # either classical (all species are equally important and only go extint when loose all partners) or stochastic (a species has a chance of going extinct proportional to the importance of its dissapeared partner)
+        if (mode=="stochastic"):
+            print("stochastic!")
+            #active_node_abundances=kwargs["abundances"]
+            W_df=copy.deepcopy(kwargs["weigths"])
+            filename="./OUTPUT/Data/Individual_areas/Ext_areaW_%s_%s_%s.dat" % (net_name,ranking,nrep)
+        else:
+            mode="classic"
+            filename="./OUTPUT/Data/Individual_areas/Ext_area_%s_%s_%s.dat" % (net_name,ranking,nrep)    
+    except:
+        mode="classic"
+        filename="./OUTPUT/Data/Individual_areas/Ext_area_%s_%s_%s.dat" % (net_name,ranking,nrep)
+
+    erased_cont=0
+    new_Mnet_dict = copy.deepcopy(Mnet._net) #since we destroy the dict we need to copy it each time
+    linking_set=get_linking_set(Mnet)
+    #if (print_to_file):
+    #filename="./OUTPUT/Data/Individual_areas/Ext_area_%s_%s_%s.dat" % (net_name,ranking,nrep)
+
+    #EA_df=pd.DataFrame(columns=list(Ext_struct))
+    EA_df=pd.DataFrame(index=range(len(nodes_to_erase)), columns=list(Ext_struct)+["Area merged","Area_pollination","Area_herbivory"])
+
+
+    for node_name in nodes_to_erase:
+        #erase node from network
+        node_layer=get_layer_of_node(node_name,Mnet,set_name="Plant") #know the interaction it comes from
+        #new_Mnet_dict=erase_node_from_Mnet(new_Mnet_dict,node_name)
+        #if (verbose):
+            #print("%s node %s (%s) erased, go to measure secondary extinctions:\n" % (erased_cont,node_name,node_layer))
+
+        if (mode == "classic"):
+            #erase node from network
+            new_Mnet_dict=erase_node_from_Mnet(new_Mnet_dict,node_name)
+            if (verbose):
+                print("%s node %s (%s) erased, go to measure secondary extinctions:\n" % (erased_cont,node_name,node_layer))
+            #measure secondary extinctions
+            Ext_struct["Plant"] = erased_cont +1
+            for interaction in node_layer:
+                Ext_struct["Plant_%s" % interaction] = Ext_struct["Plant_%s" % interaction] + 1
+        #if (mode == "classic"):
+            Ext_struct=measure_secondary_extinctions(new_Mnet_dict,Ext_struct,linking_set)
+            Area_struct=calc_ext_area(Mnet,Area_struct, Ext_struct, node_layer, mode="UW")
+
+        else: #if mode cuantitative
+            #get weights for each species
+            a_df=W_df.div(W_df.sum(axis=0), axis=1)
+            #first measure secondary extinctions
+            Ext_struct=measure_secondary_extinctions_weighted(new_Mnet_dict,Ext_struct,node_name,a_df,linking_set)
+            #then erase targetted plant from Mnet
+            new_Mnet_dict=erase_node_from_Mnet(new_Mnet_dict,node_name)
+            #and erase from weights
+            W_df.loc[node_name]=0
+            #take into account that you earsed a plant
+            Ext_struct["Plant"] = erased_cont +1
+            for interaction in node_layer:
+                Ext_struct["Plant_%s" % interaction] = Ext_struct["Plant_%s" % interaction] + 1
+            if (verbose):
+                print("%s node %s (%s) erased, go to measure extinction area:\n" % (erased_cont,node_name,node_layer))
+            #measure ext area
+            Area_struct=calc_ext_area(Mnet,Area_struct, Ext_struct, node_layer, mode="UW")
+
+        if(print_to_file or return_ext_curve):
+            #EA_df=EA_df.append(Ext_struct,ignore_index=True)
+            EA_df.loc[erased_cont]=Ext_struct
+            EA_df.loc[erased_cont,["Area_merged","Area_pollination","Area_herbivory"]]=Area_struct
+            #print(Ext_struct)    
+    #########################################
+        #measure secondary extinctions
+        erased_cont = erased_cont +1
+
+    EA_df["ext_seq"]=nodes_to_erase
+    #print(EA_df)
+    #print(EA_df)
+
+    if(print_to_file):
+        for i in Area_struct:
+            EA_df.loc[:,i]=Area_struct[i]
+
+        EA_df.to_csv(filename)
+
+
+    if (verbose):
+        print("Done ---- ")
+        print(Area_struct)
+        print(new_Mnet_dict)
+
+    if (return_ext_curve):
+        return Area_struct, EA_df
+    else:
+        return Area_struct
+def measure_secondary_extinctions_weighted(Mnet_dict,ext_struct,node_name,a_df,linking_set,verbose=False):
+    
+    if (verbose) :
+        print("enter to measure sexondary extinctions:\n")
+        #print(Mnet_dict)
+    #first round of secondary extinctions: species directly linked to plants
+    #tenemos que ver los vecinos que tiene la planta que hemos quitado, y para cada uno de ellos vamos a sortear
+    #probability of extinction proportional to dependency on species: Pext=Ri*wi (Ri=1)
+
+    n_to_erase=[]    
+    #for every neighbour of node_to_erase
+    for node in list(Mnet_dict.keys()):
+            if (node[0] == node_name): #identifiquemos vecinos que pueden extinguirse
+                neighbours=list(Mnet_dict[node].keys())
+                if (verbose) :
+                            print(neighbours)
+                for n in neighbours:
+                    #get Pext
+                    P_ext=a_df.loc[node_name,(n[1],n[0])]
+                    P=uniform(0, 1)
+                    #extinction?
+                    #no: nothing 
+                    #yes: add to array of extinct neighbours
+                    if (P<P_ext): #the higher the dependency, the higher the probability of ext.
+                        if (verbose) :
+                            print("%f< %f , %s to go extinct:\n" % (P,P_ext,n[0]))
+                        n_to_erase.append(n)   
+
+        #while neighbours_to_exinct, do:
+    while (len(n_to_erase)>0):
+            # pop neighbour
+            nn=n_to_erase.pop(0)
+            if (verbose) :
+                print("%s to go extinct, remains %i:\n" % (nn[0],len(n_to_erase)))
+            #erase from Mnet_dict
+            Mnet_dict=erase_node_from_Mnet(Mnet_dict,nn[0])
+            #add extinctions to ext_struct
+            interaction=nn[2]
+            ext_set = nn[1]
+
+            ext_struct["merged"]= ext_struct["merged"] + 1
+            ext_struct[interaction]= ext_struct[interaction] + 1
+            ext_struct[ext_set] = ext_struct[ext_set]  + 1
+
+            
+            # check for every nneighbour if goes extinct (only in AA networks)
+            # we consider that plants can survive anyway, so no extinction backwards
+                 
+    return ext_struct
+    
+def calc_ext_area_of_seq_old(Mnet,nodes_to_erase,active_set,net_name,ranking,nrep,**kwargs):
+    verbose=False
+    try:
+        verbose=kwargs["verbose"]
+    except:
+        verbose=False
+    #print("enter to calc Ext Area")
+    #we need to define one ext_are for EACH interaction network/set and another for the whole network. #decision, what happens when we erase a plant that is not connected to species in the set?? I guess you just continue, right? the % of extinct species is for the whole network.
+    #Area_struct: N_set: initial number of nodes in each set.
+    #             Area_merged: extinction are for the full merged network,
+    #             Area_set: extinction area for each set (poock's style)
+    #             Area_int: extinction are for each interaction layer separately
+
+    try:
+        print_to_file=kwargs["print_to_file"]
+    except:
+        print_to_file=False
+
+    try:
+        return_ext_curve=kwargs["ext_curve"]
+    except:
+        return_ext_curve=False
+
+    try:
+        Area_struct=kwargs["Area_struct"]
+        Area_struct=reset_area_struct(Area_struct,Mnet)
+    except:
+        Area_struct = create_area_struct(Mnet, active_set, nodes_to_erase)
+
+    try:
+        Ext_struct=kwargs["Ext_struct"]
+        Ext_struct=reset_ext_struct(Ext_struct,Mnet)
+    except:
+        Ext_struct=create_ext_struct(Mnet)
+
+
+    try:
         mode=kwargs("mode") # eighet qualitative (all species are equally important) or quantitative (importance of species proportional to abundance)
         if (mode=="cuantitative"):
             active_node_abundances=kwargs["abundances"]
@@ -427,4 +604,4 @@ def calc_ext_area_of_seq(Mnet,nodes_to_erase,active_set,net_name,ranking,nrep,**
     if (return_ext_curve):
         return Area_struct, EA_df
     else:
-        return Area_struct
+        return Area_struct    

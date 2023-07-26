@@ -1,0 +1,56 @@
+,sign,name,level_0,level_1,corr,r_EA,Defined,Defined_name
+0,AA,Hackett_1_ALL_HPa,Area_merged,Area_herbivory,0.7785714285714286,0.5172557614392345,-1,"Determined
+by 1"
+1,AA,Hackett_1_WL_HPa,Area_merged,Area_herbivory,0.8214285714285714,0.722383679791798,-1,"Determined
+by 1"
+2,AA,McFayden_10_A_HPa,Area_merged,Area_herbivory,0.7516129032258064,0.475665410535787,0,Mixed
+3,AA,McFayden_10_B_HPa,Area_merged,Area_herbivory,0.8430769230769231,0.2241064270529054,0,Mixed
+4,AA,McFayden_1_A_HPa,Area_merged,Area_herbivory,0.786923076923077,0.6755240192745616,0,Mixed
+5,AA,McFayden_1_B_HPa,Area_merged,Area_herbivory,0.828542780748663,0.5068997499812937,0,Mixed
+6,AA,McFayden_2_A_HPa,Area_merged,Area_herbivory,0.7576612903225807,0.6582409215969324,0,Mixed
+7,AA,McFayden_2_B_HPa,Area_merged,Area_herbivory,0.5149193548387097,-0.0105064311496762,0,Mixed
+8,AA,McFayden_3_A_HPa,Area_merged,Area_herbivory,0.7733957219251337,0.1225049091876356,0,Mixed
+9,AA,McFayden_3_B_HPa,Area_merged,Area_herbivory,0.6207282913165266,0.5351228381731574,0,Mixed
+10,AA,McFayden_4_A_HPa,Area_merged,Area_herbivory,0.6428493270598534,0.4449304237113284,0,Mixed
+11,AA,McFayden_4_B_HPa,Area_merged,Area_herbivory,0.8533114395183361,0.483873219718421,0,Mixed
+12,AA,McFayden_5_A_HPa,Area_merged,Area_herbivory,0.7217770034843206,0.4664778070639502,0,Mixed
+13,AA,McFayden_5_B_HPa,Area_merged,Area_herbivory,0.8223076923076923,0.247122658749156,0,Mixed
+14,AA,McFayden_6_A_HPa,Area_merged,Area_herbivory,0.6781524926686217,0.4921593168339503,1,Emergent
+15,AA,McFayden_6_B_HPa,Area_merged,Area_herbivory,0.8402669632925472,0.7659418657532541,0,Mixed
+16,AA,McFayden_7_A_HPa,Area_merged,Area_herbivory,0.719327731092437,0.4847015776847154,0,Mixed
+17,AA,McFayden_7_B_HPa,Area_merged,Area_herbivory,0.7134593993325917,0.3304059593014348,0,Mixed
+18,AA,McFayden_8_A_HPa,Area_merged,Area_herbivory,0.8086834733893558,0.5233439734366075,0,Mixed
+19,AA,McFayden_8_B_HPa,Area_merged,Area_herbivory,0.7264957264957265,0.4783448013535269,0,Mixed
+20,AA,McFayden_9_A_HPa,Area_merged,Area_herbivory,0.6057312252964426,0.2828700402436353,0,Mixed
+21,AA,McFayden_9_B_HPa,Area_merged,Area_herbivory,0.8454545454545455,0.5065146371222407,-1,"Determined
+by 1"
+22,AA,McFayden_ALL_A_HPa,Area_merged,Area_herbivory,0.8567436289839644,0.6745923639476856,-1,"Determined
+by 1"
+23,AA,McFayden_ALL_B_HPa,Area_merged,Area_herbivory,0.8676791713325868,0.6756012203338997,-1,"Determined
+by 1"
+24,MA,Hackett_1_ALL_PH,Area_merged,Area_herbivory,0.2406015037593984,-0.0115370599621774,0,Mixed
+25,MA,Hackett_1_GL_PH,Area_merged,Area_herbivory,0.1034782608695652,-0.2133560712796723,0,Mixed
+26,MA,Hackett_1_S_PH,Area_merged,Area_herbivory,-0.0725274725274725,-0.1103513987927259,-1,"Determined
+by 1"
+27,MA,Hackett_2_ALL_PH,Area_merged,Area_herbivory,0.174637127578304,-0.2613083600971552,0,Mixed
+28,MA,Melian_OO_OO_HSD,Area_dispersion,Area_herbivory,0.5855986167223636,0.1246137067338877,-1,"Determined
+by 1"
+29,MA,Melian_OO_OO_PH,Area_merged,Area_herbivory,-0.1132465078615291,-0.020614874172057,-1,"Determined
+by 1"
+30,MA,Pocock_OO_OO_PH,Area_merged,Area_herbivory,0.5127099664053751,0.2961112923573923,-1,"Determined
+by 1"
+31,MA,Sinohara_1_ALL_PH,Area_merged,Area_herbivory,0.5382870107770845,-0.0450358096646387,1,Emergent
+32,MA,Sinohara_2_ALL_PH,Area_merged,Area_herbivory,0.3526132404181185,0.1479106868827925,0,Mixed
+33,MA,Sinohara_2_E_PH,Area_merged,Area_herbivory,0.5774493705528189,0.1515245903329415,0,Mixed
+34,MA,Sinohara_3_ALL_PH,Area_merged,Area_herbivory,0.4696264975334743,0.2385762635494761,1,Emergent
+35,MA,Sinohara_3_E_PH,Area_merged,Area_herbivory,0.5715239154616241,0.5710436843807841,1,Emergent
+36,MA,Sinohara_4_ALL_PH,Area_merged,Area_herbivory,0.2630252100840336,0.4009313095529182,0,Mixed
+37,MA,Sinohara_4_I_PH,Area_merged,Area_herbivory,0.2794117647058823,0.0450580567754177,1,Emergent
+38,MA,Sinohara_ALL_A_PH,Area_merged,Area_herbivory,0.4496782496782496,0.3286705362794791,0,Mixed
+39,MA,Sinohara_ALL_E_PH,Area_merged,Area_herbivory,0.6524061343204653,0.2250582957377072,0,Mixed
+40,MA,Sinohara_ALL_I_PH,Area_merged,Area_herbivory,0.5351789035999562,0.5147836175183417,0,Mixed
+41,MM,Dattilo_OO_OO_PA,Area_ant,Area_merged,0.284290575734426,-0.0149103113660061,-1,"Determined
+by 1"
+42,MM,Dattilo_OO_OO_PSD,Area_dispersion,Area_merged,0.4235596686984872,-0.0913303105899111,0,Mixed
+43,MM,Melian_OO_OO_PSD,Area_dispersion,Area_merged,0.2251844399731723,0.0248663919390126,-1,"Determined
+by 1"

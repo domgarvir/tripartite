@@ -3,8 +3,6 @@ from Metrics import *
 from Graphics import *
 pd.options.mode.chained_assignment = None  # default='warn'
 
-
-
 measures=["HD","r_k"]
 null_models=["NL","K"]
 
@@ -21,7 +19,7 @@ i=0
 emp_df_filename="../OUTPUT/Data/Networks_df_%s.csv" % "RND" #for structural metrics we dont care about the extinction order
 emp_df=pd.read_csv(emp_df_filename, index_col="name")
 
-Table=emp_df.loc[:,["sign","int","HD","r_k"]]
+Table=emp_df.loc[:,["sign","int","name_set_a","Na","name_set_b", "Nb","linking_set","Nls","HD","r_k"]]
 index=[["A","B"],["C","D"]]
 for j in range(len(measures)):
     b=plot_boxplot_fromdf_wseaborn_to_ax(emp_df, measures[j], ax=axarr[i][j], annot=False, points=True, ylabel=measures[j],fontsize=30)
@@ -78,7 +76,10 @@ for net in Table.index:
         Table.loc[net,measure ]= "%.2f(%s)" % (value, sig)
         Table.loc[net,"Ref."]=cite_dict[net.split("_")[0]]
 
+#new_measures=["name_set_a","Na","name_set_b", "Nb","linking_set","Nls"]
+
 Table.rename(columns=label_dict, inplace=True)
+#Table=pd.concat([emp_df[new_measures],Table], axis=1)
 print(Table)
 Table_filename="../OUTPUT/Images/Table_S2.tex"
 Table.reset_index(inplace=True)

@@ -4,7 +4,8 @@ from Graphics import *
 
 
 null_models=[None,"NL","NL2", "K2","K"]
-null_models_names=[None,"NL","NL2","K2","K"]
+#null_models_names=[None,"NL","NL2","K2","K"]
+null_models_names=[None,"1","2","3","4"]
 measures=["HD","LS_HD","r_k","cLSsim","CinLHubs_20","new_cLS_PR"]#
 
 Nrep=100

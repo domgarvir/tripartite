@@ -164,7 +164,7 @@ ax8.set_xlabel("")
 ax8.set_ylabel("Count", fontsize=14)
 ax8.set_title("Ranking classification", fontsize=14)
 
-filename="../OUTPUT/Images/FIGURE_4.pdf"
+filename="../OUTPUT/Images/FIGURE_42.pdf"
 plt.tight_layout(pad=0.3)
 plt.savefig(filename)
 

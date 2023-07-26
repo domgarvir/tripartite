@@ -5,6 +5,7 @@ pd.options.mode.chained_assignment = None  # default='warn'
 
 #measures to study in the linking set nodes
 measures=["cLSsim","CinLHubs_20","new_cLS_PR"]
+#measures=["CinLHubs_5","CinLHubs_10","CinLHubs_20"]
 
 #size of figure
 #nrow=len(measures)
@@ -34,7 +35,7 @@ for j in range(ncol):
 axarr[0].set_yticks([0.2,0.4,0.6])
 axarr[0].set_ylim([0.0, 0.7])
 axarr[1].set_yticks([0.0,0.5,1.0])
-axarr[1].set_ylim([0.0, 1.2])
+axarr[1].set_ylim([0.0, 1.8])
 axarr[2].set_yticks([0.4,0.6,0.8,1.0])
 axarr[2].set_ylim([0.3, 1.1])
 

@@ -127,7 +127,7 @@ def plot_boxplot_fromdf_wseaborn_to_ax(emp_df,metric,ax=None,**kwargs):
         bplot = sns.stripplot(y=metric, x=my_column, data=emp_df, jitter=True, marker='o', alpha=0.4,   color="black",ax=ax,order=columns)
 
     if (annot):
-        test_results = add_stat_annotation(bplot, data=emp_df, x=my_column, y=metric, box_pairs=box_pairs, order=columns, test='t-test_ind', text_format='star', loc='inside',verbose=0)
+        test_results = add_stat_annotation(bplot, data=emp_df, x=my_column, y=metric, box_pairs=box_pairs, order=columns, test='t-test_ind', text_format='star', loc='inside',verbose=True)
 
         #ax.set_ylim(0,1.1)
     #elif(metric=="P_ratio_cLS"):
@@ -371,9 +371,10 @@ def corrfunc(x, y, axi=None, method="pearson", color="black", fontsize=20,square
         axi.annotate(r'$r^{2} = {%.2f}$' % (pow(r,2)), xy=(x, y), xycoords=axi.transAxes, color=color,fontsize=fontsize)
 
     else:
-        axi.annotate("r = {:.2f}".format(r),
-                xy=(x, y), xycoords=axi.transAxes, color=color,fontsize=fontsize)
-
+        if (method=="spearman"):
+                axi.annotate(r'$\rho = {%.2f}$'% (r), xy=(x, y), xycoords=axi.transAxes, color=color,fontsize=fontsize)
+        else:
+                axi.annotate(r'$r = {%.2f}$'% (r), xy=(x, y), xycoords=axi.transAxes, color=color,fontsize=fontsize)
 ### HELPERS
 def addlabels(x,y,label,fontsize=5,fontweight="bold",fontfamily='sans-serif'):
     for i in range(len(x)):
@@ -393,4 +394,105 @@ color_dict={'AA': "#8711ac", "MA":  "#87aa23","MM":"#4553c2", "M":"#0099cc"} #th
 color_dict_soft={'AA': "#9E74A2", "MA":  "#87aa23","MM":"#828BD1"}
 
     #renaming dict for all metrics ever used
-label_dict={"Ext_Area_merged_zs_NL2": r'$Z_{NL2}(EA)$', "Ext_Area_merged_zs_K2": r'$Z_{K2}(EA)$',"Ext_Area_merged_zs_NL": r'$Z_{NL}(EA)$', "Ext_Area_merged_zs_K": r'$Z_{K}(EA)$', "EA_merged": r'$EA$', "R_merged":r'$R_{M}$', "EA_corr":r'Interdependence ($I$)' , 'Ext_Area_corr_zs_NL': r'$Z_{NL}(I)$', 'Ext_Area_corr_zs_K': r'$Z_{K}(I)$',"sigmaK_norm": r'$\sigma_{k}/<k>$' ,"sigmaK_norm_Zscore": r'$Z_{NL}(\sigma_{k}/<k>)$ ',"r(k)":"r", "r(k)_Zscore_NL": r'$Z_{NL}(r)$', "r(k)_Zscore_K": r'$Z_{K}(r)$',"k_sigma_norm":r'$\sigma_{k}/<k>$' ,"K_sig. Zscore_norm":r'$Z(\sigma_{k}/<k>)$ NL',"Z_r_NL":r'$Z(r)$ NL',"Z_r_K":r'$Z(r)$ K',"epsi":r'$\epsilon$', "epsiZscore":r'$Z(\epsilon)$', "r":"r", "cLSsim":"C","CinLHubs":r'$H_{c}$',"P_ratio_cLS":r'$PR_{C}$','Ext_Area_corr_zs_NL2':r'$Z_{NL2}(I)$','Ext_Area_corr_zs_K2':r'$Z_{K2}(I)$', 'Ext_Area_corr_zs_constant_KnonLS_free':r'$Z_{F}(I)$', "Ext_Area_merged_zs_constant_KnonLS_free": r'$Z_{F}(EA)$', "HinC_10pc":r'$C_{H_{10}}$',"HinC_5":r'$C_{H_{5}}$',"new_PR":r'$PR_{LS}$',"new_cLS_PR": r'$PR_{C}$','rb(k)':r'$r_{B}$','rb_k':r'$r_{B}$','r_clean':r'$\rho$', "emp_LS_HD":r'$\sigma_{k_{LS}}/<k_{LS}>$',"emp_nonLS_HD":r'$\sigma_{k_{nLS}}/<k_{nLS}>$',"LS_HD_ZS":r'$\sigma_{k_{LS}}/<k_{LS}>$', "nonLS_HD_ZS":r'$\sigma_{k_{nLS}}/<k_{nLS}>$', "P_HD":r'$\sigma_{k_{P}}/<k_{P}>$', "nonP_HD":r'$\sigma_{k_{nP}}/<k_{nP}>$', "emp_P_HD":r'$\sigma_{k_{P}}/<k_{P}>$',"emp_nonP_HD":r'$\sigma_{k_{nP}}/<k_{nP}>$', 'P_HD_ZS':r'$\sigma_{k_{P}}/<k_{P}>$', 'nonP_HD_ZS':r'$\sigma_{k_{nP}}/<k_{nP}>$',"":"","RND":"RND","OD":"DD","ODinv":"ID", "HD":r'$\sigma_{k}/<k>$', "LS_HD":r'$\sigma_{k_{LS}}/<k_{LS}>$', "CinLHubs_20": r'$H_{C}$',"r_k": "r",'Zs_NL_HD':r'$Z_{NL}(\sigma_{k}/<k>)$','Zs_K_r_k': r'$Z_{K}(r)$', 'Zs_K_rb_k': r'$Z_{K}(r_b)$','Zs_NL_r_EA':r'$Z_{NL}(I)$', 'Zs_K_r_EA':r'$Z_{K}(I)$','Zs_NL2_r_EA':r'$Z_{NL2}(I)$','Zs_K2_r_EA':r'$Z_{K2}(I)$','Zs_NL2_Area_merged':r'$Z_{NL2}(EA)$','Zs_K2_Area_merged': r'$Z_{K2}(EA)$','Zs_NL_Area_merged':r'$Z_{NL}(EA)$','Zs_K_Area_merged':r'$Z_{K}(EA)$', "Area_merged":r'$EA_{M}$','lsB_HD':r'$(\sigma_{k}/<k>)_{LS_B}$','lsA_HD':r'$(\sigma_{k}/<k>)_{LS_A}$','LS_HD':r'$(\sigma_{k}/<k>)_{LS}$','R_merged':r'$R$','Robust_merged':r'$R$', 'Zs_NL2_Robust_merged':r'$Z_{NL2}(R)$','Zs_K2_Robust_merged': r'$Z_{K2}(R)$','Zs_NL_Robust_merged':r'$Z_{NL}(R)$','Zs_K_Robust_merged':r'$Z_{K}(R)$'}
+label_dict={#"Ext_Area_merged_zs_NL2": r'$Z_{NL2}(EA)$', 
+            "Ext_Area_merged_zs_NL2": r'$Z_{2}(EA)$',
+            #"Ext_Area_merged_zs_K2": r'$Z_{K2}(EA)$',
+            "Ext_Area_merged_zs_K2": r'$Z_{3}(EA)$',
+            #"Ext_Area_merged_zs_NL": r'$Z_{NL}(EA)$', 
+            "Ext_Area_merged_zs_NL": r'$Z_{1}(EA)$', 
+            #"Ext_Area_merged_zs_K": r'$Z_{K}(EA)$', 
+            "Ext_Area_merged_zs_K": r'$Z_{4}(EA)$', 
+            "EA_merged": r'$EA$', 
+            "R_merged":r'$R_{M}$', 
+            "EA_corr":r'Interdependence ($I$)', 
+            #'Ext_Area_corr_zs_NL': r'$Z_{NL}(I)$', 
+            'Ext_Area_corr_zs_NL': r'$Z_{1}(I)$', 
+            #'Ext_Area_corr_zs_K': r'$Z_{K}(I)$',
+            'Ext_Area_corr_zs_K': r'$Z_{4}(I)$',
+            "sigmaK_norm": r'$\sigma_{k}/<k>$' ,
+            #"sigmaK_norm_Zscore": r'$Z_{NL}(\sigma_{k}/<k>)$ ',
+            "sigmaK_norm_Zscore": r'$Z_{1}(\sigma_{k}/<k>)$ ',
+            "r(k)":"r", 
+            #"r(k)_Zscore_NL": r'$Z_{NL}(r)$', 
+            "r(k)_Zscore_NL": r'$Z_{1}(r)$', 
+            #"r(k)_Zscore_K": r'$Z_{K}(r)$',
+            "r(k)_Zscore_K": r'$Z_{4}(r)$',
+            "k_sigma_norm":r'$\sigma_{k}/<k>$' ,
+            #"K_sig. Zscore_norm":r'$Z(\sigma_{k}/<k>)$ NL',
+            "K_sig. Zscore_norm":r'$Z(\sigma_{k}/<k>)$ 1',
+            #"Z_r_NL":r'$Z(r)$ NL',
+            "Z_r_NL":r'$Z(r)$ 1',
+            #"Z_r_K":r'$Z(r)$ K',
+            "Z_r_K":r'$Z(r)$ 4',
+            "epsi":r'$\epsilon$', 
+            "epsiZscore":r'$Z(\epsilon)$', 
+            "r":"r", 
+            "cLSsim":"C",
+            "CinLHubs":r'$H_{c}$',
+            "P_ratio_cLS":r'$PR_{C}$',
+            #'Ext_Area_corr_zs_NL2':r'$Z_{NL2}(I)$',
+            'Ext_Area_corr_zs_NL2':r'$Z_{2}(I)$',
+            #'Ext_Area_corr_zs_K2':r'$Z_{K2}(I)$', 
+            'Ext_Area_corr_zs_K2':r'$Z_{3}(I)$',
+            #'Ext_Area_corr_zs_constant_KnonLS_free':r'$Z_{F}(I)$', 
+            #"Ext_Area_merged_zs_constant_KnonLS_free": r'$Z_{F}(EA)$', 
+            "HinC_10pc":r'$C_{H_{10}}$',"HinC_5":r'$C_{H_{5}}$',"new_PR":r'$PR_{LS}$',
+            #"new_cLS_PR": r'$PR_{C}$'
+            "new_cLS_PR": r'$PC_{C}$' ,'rb(k)':r'$r_{B}$','rb_k':r'$r_{B}$','r_clean':r'$\rho$', 
+            "emp_LS_HD":r'$\sigma_{k_{LS}}/<k_{LS}>$',
+            "emp_nonLS_HD":r'$\sigma_{k_{nLS}}/<k_{nLS}>$',
+            "LS_HD_ZS":r'$\sigma_{k_{LS}}/<k_{LS}>$', 
+            "nonLS_HD_ZS":r'$\sigma_{k_{nLS}}/<k_{nLS}>$', 
+            "P_HD":r'$\sigma_{k_{P}}/<k_{P}>$', 
+            "nonP_HD":r'$\sigma_{k_{nP}}/<k_{nP}>$', 
+            "emp_P_HD":r'$\sigma_{k_{P}}/<k_{P}>$',
+            "emp_nonP_HD":r'$\sigma_{k_{nP}}/<k_{nP}>$', 
+            'P_HD_ZS':r'$\sigma_{k_{P}}/<k_{P}>$', 
+            'nonP_HD_ZS':r'$\sigma_{k_{nP}}/<k_{nP}>$',"":"",
+            "RND":"RND","OD":"DD","ODinv":"ID", "HD":r'$\sigma_{k}/<k>$', 
+            "LS_HD":r'$\sigma_{k_{LS}}/<k_{LS}>$', 
+            "CinLHubs_20": r'$H_{C}$',"r_k": "r",
+            #'Zs_NL_HD':r'$Z_{NL}(\sigma_{k}/<k>)$',
+            'Zs_NL_HD':r'$Z_{1}(\sigma_{k}/<k>)$',
+            #'Zs_K_r_k': r'$Z_{K}(r)$', 'Zs_K_rb_k': r'$Z_{K}(r_b)$',
+            'Zs_K_r_k': r'$Z_{4}(r)$', 'Zs_K_rb_k': r'$Z_{4}(r_b)$',
+            #'Zs_NL_r_EA':r'$Z_{NL}(I)$', 
+            'Zs_NL_r_EA':r'$Z_{1}(I)$', 
+            #'Zs_K_r_EA':r'$Z_{K}(I)$',
+            'Zs_K_r_EA':r'$Z_{4}(I)$',
+            #'Zs_NL2_r_EA':r'$Z_{NL2}(I)$',
+            'Zs_NL2_r_EA':r'$Z_{2}(I)$',
+            #'Zs_K2_r_EA':r'$Z_{K2}(I)$',
+            'Zs_K2_r_EA':r'$Z_{3}(I)$',
+            #'Zs_NL2_Area_merged':r'$Z_{NL2}(EA)$',
+            'Zs_NL2_Area_merged':r'$Z_{2}(EA)$',
+            #'Zs_K2_Area_merged': r'$Z_{K2}(EA)$',
+            'Zs_K2_Area_merged': r'$Z_{3}(EA)$',
+            #'Zs_NL_Area_merged':r'$Z_{NL}(EA)$',
+            'Zs_NL_Area_merged':r'$Z_{1}(EA)$',
+            #'Zs_K_Area_merged':r'$Z_{K}(EA)$', 
+            'Zs_K_Area_merged':r'$Z_{4}(EA)$', 
+            "Area_merged":r'$EA_{M}$',
+            'lsB_HD':r'$(\sigma_{k}/<k>)_{LS_B}$',
+            'lsA_HD':r'$(\sigma_{k}/<k>)_{LS_A}$',
+            'LS_HD':r'$(\sigma_{k}/<k>)_{LS}$',
+            'R_merged':r'$R$',
+            'Robust_merged':r'$R$', 
+            #'Zs_NL2_Robust_merged':r'$Z_{NL2}(R)$',
+            'Zs_NL2_Robust_merged':r'$Z_{2}(R)$',
+            #'Zs_K2_Robust_merged': r'$Z_{K2}(R)$',
+            'Zs_K2_Robust_merged': r'$Z_{3}(R)$',
+            #'Zs_NL_Robust_merged':r'$Z_{NL}(R)$',
+            'Zs_NL_Robust_merged':r'$Z_{1}(R)$',
+            #'Zs_K_Robust_merged':r'$Z_{K}(R)$',
+            'Zs_K_Robust_merged':r'$Z_{4}(R)$',
+            "CinLHubs_10":r'$H_{c10}$',
+            "CinLHubs_5":r'$H_{c5}$',
+            "DN":r'$\Delta N$',
+            "DN_r": r'$\Delta N_{r}$',
+            "name_set_a": "Set a",
+            "Na": r'$N_{a}$',
+            "name_set_b": "Set b", 
+            "Nb": r'$N_{b}$',
+            "linking_set":"Set shared",
+            "Nls":r'$N_{s}$'}

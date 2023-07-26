@@ -6,7 +6,7 @@ pd.options.mode.chained_assignment = None  # default='warn'
 import numpy as np
 import itertools
 from pymnet import *
-from random import seed, randint, shuffle, sample
+from random import seed, randint, shuffle, sample, uniform
 from math import ceil
 
 #READING - WRITING MNETWORKS
@@ -387,6 +387,47 @@ def get_df_from_ment(Mnet,**kwargs):
     #print(M_df.head(15))
 
     return M_df
+def getMMatrix_fom_mnet(Mnet):
+
+     #get rows
+    linking_set=get_linking_set(Mnet)
+    linking_nodes=get_nodes_in_set(Mnet,set_name=linking_set)
+    #now columns
+    sp_sets=list(Mnet.slices[1])
+    sp_sets.remove(linking_set)
+    sp_set1=get_nodes_in_set(Mnet,set_name=sp_sets[0])
+    sp_set2=get_nodes_in_set(Mnet,set_name=sp_sets[1])
+    #create multiindex from this
+    #tuples_set1=[(sp_sets[0],x) for x in sp_set1]
+    #tuples_set2=[(sp_sets[1],x) for x in sp_set2]
+    #tuples=tuples_set1+tuples_set2
+    dummy_set1=[sp_sets[0] for x in sp_set1]
+    dummy_set2=[sp_sets[1] for x in sp_set2]
+    dummy_sets=dummy_set1+dummy_set2
+    sp=sp_set1+sp_set2
+    mi=pd.MultiIndex.from_arrays([dummy_sets,sp], names=('set', 'sp_name'))
+    #create df with linking nodes rows and sp_sets1 + sp_sets2 columns
+    mdf=pd.DataFrame(index=linking_nodes,columns=mi)
+    
+
+    for sp in linking_nodes:
+        for node in list(Mnet._net.keys()):
+            if (node[0]==sp): #vemos los vecinos que tiene
+                for node2 in list(Mnet._net[node].keys()):#para cada vecino, sacar set y nombre y fr
+                    sp2,set,int=node2
+                    fr=Mnet._net[node][node2]
+                    mdf.loc[sp,(set,sp2)]=fr
+
+    mdf=mdf.fillna(0).astype(float)
+    
+    #divide each column by the total frequency
+    #a=mdf.div(mdf.sum(axis=0), axis=1)
+
+    #divide each row by the total freq
+    #p=mdf.div(mdf.sum(axis=1), axis=0)
+
+    return mdf
+
 #NETWORK RANDOMIZATIONS
 ############################################
 def nullmodel_constantNL(nxMnet, **kwargs):
@@ -762,14 +803,12 @@ dict_name_net={
                 #MA
                "Sinohara_1_ALL_PH":"H-P","Sinohara_2_ALL_PH":"H-P", "Sinohara_3_ALL_PH":"H-P","Sinohara_4_ALL_PH":"H-P",
                "Sinohara_ALL_A_PH":"H-P", "Sinohara_ALL_E_PH":"H-P", "Sinohara_ALL_I_PH":"H-P",
-               "Sinohara_1_A_PH":"H-P","Sinohara_2_A_PH":"H-P", "Sinohara_3_A_PH":"H-P","Sinohara_4_A_PH":"H-P",
-               "Sinohara_1_E_PH":"H-P","Sinohara_2_E_PH":"H-P", "Sinohara_3_E_PH":"H-P","Sinohara_4_E_PH":"H-P",
-               "Sinohara_1_I_PH":"H-P","Sinohara_2_I_PH":"H-P", "Sinohara_3_I_PH":"H-P","Sinohara_4_I_PH":"H-P",
+               "Sinohara_2_E_PH":"H-P", "Sinohara_3_E_PH":"H-P",
+               "Sinohara_4_I_PH":"H-P",
                "Melian_OO_OO_PH":"H-P",
                "Hackett_1_ALL_PH":"H-P", "Hackett_2_ALL_PH":"H-P",
-               "Hackett_1_SM_PH":"H-P_old","Hackett_1_S_PH":"H-P","Hackett_1_SD_PH":"H-P_old","Hackett_1_WL_PH":"H-P_old",
-               "Hackett_1_GL_PH":"H-P","Hackett_1_HL_PH":"H-P_old",
-               "Hackett_2_SD_PH":"H-P_old",  "Hackett_2_SM_PH":"H-P_old", "Hackett_2_SC_PH":"H-P_old",
+               "Hackett_1_S_PH":"H-P",
+               "Hackett_1_GL_PH":"H-P",
                "Melian_OO_OO_HSD":"H-SD",
                "Pocock_OO_OO_PH":"H-P",
                 #AA
@@ -860,4 +899,5 @@ def invert_dict_wl(my_dict):
                 new_dict[element]=k
 
     return new_dict
-
+dict_sign_types_2_net_type=invert_dict(dict_net_type)
+dict_type_2_names=invert_dict(dict_name_net)
